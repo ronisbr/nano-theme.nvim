@@ -45,7 +45,10 @@ This plugins has been tested so far using lazy.nvim as the plugin manager:
 
 ```lua
 {
-    "ronisbr/nano-theme"
+  "ronisbr/nano-theme",
+  init = function ()
+    vim.o.background = "light", -- or "dark".
+  end
 }
 ```
 ## Screenshots

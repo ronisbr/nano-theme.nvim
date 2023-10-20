@@ -34,7 +34,6 @@ function M.load()
 
   -- Set the variables regarding the current theme.
   vim.g.colors_name = "nano-theme"
-  vim.o.background = "light"
   vim.o.termguicolors = true
 
   -- Load the default groups.
