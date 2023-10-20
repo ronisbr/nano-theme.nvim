@@ -54,3 +54,5 @@ This plugins has been tested so far using lazy.nvim as the plugin manager:
 ## Screenshots
 
 ![Light Theme](./screenshots/screenshot_light_01.png)
+
+![Dark Theme](./screenshots/screenshot_dark_01.png)
