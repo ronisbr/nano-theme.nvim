@@ -7,7 +7,7 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 
 - **Critical face** is for information that requires immediate action.
 
-> It should be of high constrast when compared to other faces. This can be realized (for
+> It should be of high contrast when compared to other faces. This can be realized (for
 > example) by setting an intense background color, typically a shade of red. It must be used
 > scarcely.
 
