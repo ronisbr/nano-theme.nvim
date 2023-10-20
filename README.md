@@ -48,3 +48,6 @@ This plugins has been tested so far using lazy.nvim as the plugin manager:
     "ronisbr/nano-theme"
 }
 ```
+## Screenshots
+
+![Light Theme](./screenshots/screenshot_light_01.png)
