@@ -21,6 +21,7 @@ function M.get()
     EndOfBuffer  = {},
     ErrorMsg     = c.nano_critical,
     VertSplit    = { fg = c.bg, bg = c.bg },
+    FoldColumn   = { bg = c.bg },
     Folded       = { fg = c.nano_salient_color, bold = true },
     SignColumn   = c.nano_faded,
     SignColumnSB = c.nano_faded,
@@ -36,7 +37,7 @@ function M.get()
     NormalSB     = { link = "Normal" },
     NormalFloat  = { fg = c.fg, bg = c.nano_highlight_color },
     FloatBorder  = c.nano_foreground,
-    FloatTitle   = c.nano_strong, -- Title of floating windows
+    FloatTitle   = c.nano_strong,
     Pmenu        = { fg = c.fg, bg = c.bg_alt },
     PmenuSel     = { bg = c.nano_subtle_color },
     PmenuSbar    = { bg = c.nano_faded_color },
