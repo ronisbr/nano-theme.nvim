@@ -26,7 +26,7 @@ function M.get()
     FoldColumn    = { bg = c.bg },
     Folded        = { fg = c.nano_salient_color, bold = true },
     IncSearch     = { bg = c.nano_subtle_color },
-    healthSuccess = { fg = c.nano_popout_color },
+    healthSuccess = { fg = c.nano_salient_color },
     LineNr        = c.nano_faded,
     MatchParen    = { bg = c.nano_subtle_color, bold = true },
     ModeMsg       = c.nano_faded,
