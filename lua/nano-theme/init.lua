@@ -54,13 +54,14 @@ function M.load()
   local integrations = {
     "dashboard",
     "mini",
-    "neotree",
     "neogit",
+    "neorg",
+    "neotree",
+    "noice",
     "notify",
     "nvim-lsp",
-    "noice",
-    "treesitter",
     "telescope",
+    "treesitter",
   }
 
   for k, i in ipairs(integrations) do
