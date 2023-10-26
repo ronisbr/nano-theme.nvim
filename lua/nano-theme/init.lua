@@ -55,7 +55,6 @@ function M.load()
     "dashboard",
     "mini",
     "neogit",
-    "neorg",
     "neotree",
     "noice",
     "notify",
