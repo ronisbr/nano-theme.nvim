@@ -40,11 +40,11 @@ function M.get()
 
     ["@constructor"]      = c.nano_salient,
     ["@function"]         = { link = "Function" },
-    ["@function.builtin"] = { link = "Function" },
-    ["@function.call"]    = { link = "Normal" },
+    ["@function.builtin"] = c.nano_foreground,
+    ["@function.call"]    = c.nano_foreground,
     ["@function.macro"]   = { link = "Function" },
     ["@method"]           = { link = "Function" },
-    ["@method.call"]      = { link = "Normal" },
+    ["@method.call"]      = c.nano_foreground,
     ["@parameter"]        = c.nano_forground,
 
     -- Keywords ----------------------------------------------------------------------------
