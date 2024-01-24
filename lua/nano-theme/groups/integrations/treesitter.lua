@@ -60,6 +60,13 @@ function M.get()
     ["@label"]            = { link = "Label" },
     ["@repeat"]           = { link = "Repeat" },
 
+    -- Markup ------------------------------------------------------------------------------
+
+    ["@markup"]             = { link = "Special" },
+    ["@markup.heading"]     = { link = "Title" },
+    ["@markup.environment"] = { link = "Structure" },
+    ["@markup.link"]        = { link = "Underlined" },
+
     -- Types -------------------------------------------------------------------------------
 
     ["@attribute"]       = { link = "Constant" },
@@ -77,6 +84,7 @@ function M.get()
     ["@constant.builtin"] = { link = "Constant" },
     ["@constant.macro"]   = { link = "Macro" },
     ["@namespace"]        = c.nano_strong,
+    ["@module"]           = { link = "Structure" },
     ["@symbol"]           = c.nano_salient,
     ["@variable"]         = c.nano_foreground,
     ["@variable.builtin"] = c.nano_foreground,
