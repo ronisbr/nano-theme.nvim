@@ -12,8 +12,8 @@ function M.get()
   return {
 		TelescopeBorder         = { link = "FloatBorder" },
 		TelescopeMatching       = c.nano_salient,
-		TelescopeSelection      = { bg = c.nano_highlight_color },
-		TelescopeSelectionCaret = c.nano_faded,
+		TelescopeSelection      = { bg = c.nano_subtle_color },
+		TelescopeSelectionCaret = { fg = c.nano_faded_color, bg = c.nano_subtle_color },
     TelescopeNormal         = { fg = c.fg },
     TelescopePromptCounter  = c.nano_faded,
     TelescopePromptPrefix   = c.nano_popout,
