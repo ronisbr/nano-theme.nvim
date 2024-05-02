@@ -10,9 +10,11 @@ function M.get()
   local c = require("nano-theme.colors").get()
 
   return {
+    Added          = c.nano_salient,
     Bold           = { bold = true },
     Boolean        = c.nano_salient,
     Character      = c.nano_faded,
+    Changed        = c.nano_popout,
     Comment        = c.nano_faded,
     Conditional    = c.nano_salient,
     Constant       = c.nano_salient,
