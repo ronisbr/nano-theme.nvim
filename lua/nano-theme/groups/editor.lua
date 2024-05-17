@@ -32,7 +32,7 @@ function M.get()
     ModeMsg       = c.nano_faded,
     MoreMsg       = c.nano_foreground,
     MsgSeparator  = {},
-    NonText       = c.nano_faded,
+    NonText       = { fg = c.nano_veryfaded_color, italic = true },
     Normal        = { fg = c.fg, bg = c.bg },
     NormalFloat   = { fg = c.fg, bg = c.nano_highlight_color },
     NormalNC      = { link = "Normal" },
