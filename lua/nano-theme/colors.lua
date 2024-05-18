@@ -63,6 +63,7 @@ function M.get()
     nano_highlight  = { fg = nano_highlight_color },
     nano_subtle     = { fg = nano_subtle_color },
     nano_faded      = { fg = nano_faded_color },
+    nano_veryfaded  = { fg = nano_veryfaded_color },
     nano_salient    = { fg = nano_salient_color },
     nano_strong     = { fg = nano_strong_color, bold = true },
     nano_popout     = { fg = nano_popout_color },
