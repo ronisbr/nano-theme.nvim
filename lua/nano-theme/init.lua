@@ -53,6 +53,7 @@ function M.load()
   -- List of available integrations.
   local integrations = {
     "dashboard",
+    "indent-blankline",
     "mini",
     "neogit",
     "neotree",
