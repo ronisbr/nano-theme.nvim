@@ -1,11 +1,11 @@
 -- nano-theme.nvim --- A Neovim theme based on N Λ N O Emacs -------------------------------
 --
--- Copyright (C) 2023  Ronan Arraes Jardim Chagas
+-- Copyright (C) 2023 - 2024  Ronan Arraes Jardim Chagas
 --
 -- License ---------------------------------------------------------------------------------
 --
 -- nano-theme.nvim - A Neovim theme based on N Λ N O Emacs
--- Copyright (C) 2023  Ronan Arraes Jardim Chagas
+-- Copyright (C) 2023 - 2024  Ronan Arraes Jardim Chagas
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
