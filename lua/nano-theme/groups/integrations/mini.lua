@@ -26,6 +26,16 @@ function M.get()
 
       MiniNotifyNormal = { link = "Normal" },
 
+      -- mini.pick -------------------------------------------------------------------------
+
+      MiniPickMatchCurrent  = { bg = c.nano_subtle_color },
+      MiniPickMatchMarked   = { fg = c.nano_salient_color, bold = true },
+      MiniPickMatchRanges   = { fg = c.nano_salient_color, bold = true },
+      MiniPickNormal        = { link = "Normal" },
+      MiniPickPreviewLine   = { bg = c.nano_subtle_color },
+      MiniPickPreviewRegion = { bg = c.nano_subtle_color },
+      MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
+
       -- mini.statusline -------------------------------------------------------------------
 
       MiniStatuslineModeCommand = { fg = c.bg, bg = c.nano_foreground_color },
