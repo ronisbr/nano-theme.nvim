@@ -34,7 +34,7 @@ function M.get()
     MsgSeparator  = {},
     NonText       = { fg = c.nano_veryfaded_color, italic = true },
     Normal        = { fg = c.fg, bg = c.bg },
-    NormalFloat   = { fg = c.fg, bg = c.nano_highlight_color },
+    NormalFloat   = { link = "Normal" },
     NormalNC      = { link = "Normal" },
     NormalSB      = { link = "Normal" },
     Pmenu         = { fg = c.fg, bg = c.bg_alt },
