@@ -36,6 +36,14 @@ function M.get()
     MiniPickPreviewRegion = { bg = c.nano_subtle_color },
     MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
 
+    -- mini.snippets -----------------------------------------------------------------------
+
+    MiniSnippetsCurrent        = c.nano_popout,
+    MiniSnippetsCurrentReplace = c.nano_popout,
+    MiniSnippetsFinal          = c.nano_subtle,
+    MiniSnippetsUnvisted       = c.nano_subtle,
+    MiniSnippetsVisited        = c.nano_subtle,
+
     -- mini.statusline ---------------------------------------------------------------------
 
     MiniStatuslineModeCommand = { fg = c.bg, bg = c.nano_foreground_color },
