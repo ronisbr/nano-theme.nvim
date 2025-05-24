@@ -10,7 +10,7 @@ function M.get()
   local c = require("nano-theme.colors").get()
 
   return {
-    -- mini.clue -------------------------------------------------------------------------
+    -- mini.clue ---------------------------------------------------------------------------
 
     MiniClueDescSingle          = { link = "Normal" },
     MiniClueDescGroup           = { fg = c.nano_salient_color, bg = c.bg },
@@ -18,15 +18,15 @@ function M.get()
     MiniClueNextKeyWithPostkeys = { fg = c.nano_salient_color, bg = c.bg },
     MiniClueSeparator           = { link = "Normal" },
 
-    -- mini.identscope -------------------------------------------------------------------
+    -- mini.identscope ---------------------------------------------------------------------
 
     MiniIndentscopeSymbol = c.nano_veryfaded,
 
-    -- mini.notify -----------------------------------------------------------------------
+    -- mini.notify -------------------------------------------------------------------------
 
     MiniNotifyNormal = { link = "Normal" },
 
-    -- mini.pick -------------------------------------------------------------------------
+    -- mini.pick ---------------------------------------------------------------------------
 
     MiniPickMatchCurrent  = { bg = c.nano_subtle_color },
     MiniPickMatchMarked   = { fg = c.nano_salient_color, bold = true },
@@ -36,7 +36,7 @@ function M.get()
     MiniPickPreviewRegion = { bg = c.nano_subtle_color },
     MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
 
-    -- mini.statusline -------------------------------------------------------------------
+    -- mini.statusline ---------------------------------------------------------------------
 
     MiniStatuslineModeCommand = { fg = c.bg, bg = c.nano_foreground_color },
     MiniStatuslineModeInsert  = { fg = c.bg, bg = c.nano_popout_color },
@@ -50,7 +50,7 @@ function M.get()
     MiniStatuslineFilename    = { fg = c.fg, bg = c.nano_subtle_color, bold = true },
     MiniStatuslineInactive    = { fg = c.nano_faded_color, bg = c.nano_subtle_color },
 
-    -- mini.tabline ----------------------------------------------------------------------
+    -- mini.tabline ------------------------------------------------------------------------
 
     MiniTablineCurrent         = { fg = c.fg, bg = c.nano_highlight_color, bold = true },
     MiniTablineVisible         = { fg = c.fg, bg = c.nano_subtle_color },
@@ -61,7 +61,7 @@ function M.get()
     MiniTablineFill            = { fg = c.fg, bg = c.nano_subtle_color },
     MiniTablineTabpagesection  = { fg = c.nano_faded_color, bg = c.nano_subtle_color },
 
-    -- mini.trailspace -------------------------------------------------------------------
+    -- mini.trailspace ---------------------------------------------------------------------
 
     MiniTrailspace = { fg = c.bg, bg = c.nano_subtle_color },
   }
