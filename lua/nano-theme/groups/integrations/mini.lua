@@ -41,8 +41,8 @@ function M.get()
     MiniSnippetsCurrent        = c.nano_popout,
     MiniSnippetsCurrentReplace = c.nano_popout,
     MiniSnippetsFinal          = c.nano_subtle,
-    MiniSnippetsUnvisted       = c.nano_subtle,
-    MiniSnippetsVisited        = c.nano_subtle,
+    MiniSnippetsUnvisted       = c.nano_faded,
+    MiniSnippetsVisited        = c.nano_faded,
 
     -- mini.statusline ---------------------------------------------------------------------
 
