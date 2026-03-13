@@ -18,9 +18,9 @@ function M.get()
   local base5 = is_light_theme and "#787870" or "#4C566A"
   local base6 = is_light_theme and "#484840" or "#9099AB"
   local base7 = is_light_theme and "#1E1E1A" or "#D8DEE9"
- 
+
   -- NANO semantic colors.
-  local nano_foreground_color  = is_light_theme and "#3A3D38" or "#EDECEA"
+  local nano_foreground_color  = is_light_theme and "#3A3D38" or "#D4D0CA"
   local nano_background_color  = is_light_theme and "#FAFAF7" or "#262624"
   local nano_highlight_color   = is_light_theme and "#F2F2ED" or "#363630"
   local nano_subtle_color      = is_light_theme and "#E8E8E2" or "#42423C"
