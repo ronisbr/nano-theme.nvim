@@ -12,8 +12,8 @@ function M.get()
   -- Base ramp.
   local base0 = is_light_theme and "#FAFAF7" or "#191C25"
   local base1 = is_light_theme and "#F2F2ED" or "#242832"
-  local base2 = is_light_theme and "#E8E8E2" or "#2C333F"
-  local base3 = is_light_theme and "#D0D0C8" or "#373E4C"
+  local base2 = is_light_theme and "#E8E8E2" or "#2C2C28"
+  local base3 = is_light_theme and "#D0D0C8" or "#373730"
   local base4 = is_light_theme and "#A8A8A0" or "#42423C"
   local base5 = is_light_theme and "#787870" or "#4C566A"
   local base6 = is_light_theme and "#484840" or "#9099AB"
@@ -24,23 +24,23 @@ function M.get()
   local nano_background_color  = is_light_theme and "#FAFAF7" or "#262624"
   local nano_highlight_color   = is_light_theme and "#F2F2ED" or "#363630"
   local nano_subtle_color      = is_light_theme and "#E8E8E2" or "#42423C"
-  local nano_faded_color       = is_light_theme and "#9A9E9C" or "#767670"
+  local nano_faded_color       = is_light_theme and "#9A9E9C" or "#828278"
   local nano_veryfaded_color   = is_light_theme and "#C4C4BC" or "#505048"
-  local nano_salient_color     = is_light_theme and "#7B3F8C" or "#7D9AB5"
+  local nano_salient_color     = is_light_theme and "#7B3F8C" or "#6D9FCA"
   local nano_strong_color      = is_light_theme and "#252520" or "#F0EFEB"
-  local nano_popout_color      = is_light_theme and "#D95F2B" or "#D08770"
+  local nano_popout_color      = is_light_theme and "#E8865A" or "#D08770"
   local nano_critical_color    = is_light_theme and "#FF6F00" or "#EBCB8B"
 
-  local blue    = "#42A5F5"
-  local cyan    = "#26C6DA"
-  local green   = "#66BB6A"
-  local magenta = "#AB47BC"
-  local red     = "#EF5350"
-  local yellow  = "#E2C12F"
+  -- Accent colors.
+  local blue    = is_light_theme and "#2E6FA3" or "#42A5F5"
+  local cyan    = is_light_theme and "#1A8F9E" or "#26C6DA"
+  local green   = is_light_theme and "#3D8B41" or "#66BB6A"
+  local magenta = is_light_theme and "#913AA0" or "#B455C8"
+  local red     = is_light_theme and "#C03830" or "#EF5350"
+  local yellow  = is_light_theme and "#C49A00" or "#E2C12F"
 
   local colors = {
     -- Colors ------------------------------------------------------------------------------
-
     nano_foreground_color = nano_foreground_color,
     nano_background_color = nano_background_color,
     nano_highlight_color  = nano_highlight_color,
@@ -52,9 +52,8 @@ function M.get()
     nano_popout_color     = nano_popout_color,
     nano_critical_color   = nano_critical_color,
 
-    bg = nano_background_color,
-    fg = nano_foreground_color,
-
+    bg     = nano_background_color,
+    fg     = nano_foreground_color,
     bg_alt = nano_highlight_color,
     fg_alt = nano_foreground_color,
 
@@ -73,7 +72,7 @@ function M.get()
 
     -- Terminal Colors ---------------------------------------------------------------------
 
-    terminal_color_0  = nano_faded_color,
+    terminal_color_0  = is_light_theme and base6 or nano_faded_color,
     terminal_color_1  = red,
     terminal_color_2  = green,
     terminal_color_3  = yellow,
@@ -81,7 +80,7 @@ function M.get()
     terminal_color_5  = magenta,
     terminal_color_6  = cyan,
     terminal_color_7  = nano_foreground_color,
-    terminal_color_8  = nano_faded_color,
+    terminal_color_8  = is_light_theme and base6 or nano_faded_color,
     terminal_color_9  = red,
     terminal_color_10 = green,
     terminal_color_11 = yellow,
