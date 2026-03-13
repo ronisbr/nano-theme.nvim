@@ -83,7 +83,7 @@ function M.get()
 
     -- Terminal Colors ---------------------------------------------------------------------
 
-    terminal_color_0  = is_light_theme and base6 or nano_faded_color,
+    terminal_color_0  = base6,
     terminal_color_1  = red,
     terminal_color_2  = green,
     terminal_color_3  = yellow,
@@ -91,7 +91,7 @@ function M.get()
     terminal_color_5  = magenta,
     terminal_color_6  = cyan,
     terminal_color_7  = nano_foreground_color,
-    terminal_color_8  = is_light_theme and base6 or nano_faded_color,
+    terminal_color_8  = base6,
     terminal_color_9  = red,
     terminal_color_10 = green,
     terminal_color_11 = yellow,
