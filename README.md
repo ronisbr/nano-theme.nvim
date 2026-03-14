@@ -41,17 +41,21 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 > It is important to not disturb too strongly the reading of information and this can be
 > made by setting a very light background color that is barely perceptible.
 
+This version of the N Λ N O theme is slightly modified compared to the Emacs version. We
+decided to make the background warmer in the light theme and remove the blue tint in the
+dark version. All colors were slightly tuned to meet the minimum contrast requirements for
+accessibility.
+
 ## Installation
 
-This plugins has been tested so far using lazy.nvim as the plugin manager:
+This plugin has been tested with mini.deps the plugin manager but probablly work with any
+other one:
 
 ```lua
-{
-  "ronisbr/nano-theme.nvim",
-  init = function ()
-    vim.o.background = "light" -- or "dark".
-  end
-}
+MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
+
+vim.cmd.colorscheme("nano-theme")
+vim.o.background = "light" -- or "dark"
 ```
 ## Screenshots
 
