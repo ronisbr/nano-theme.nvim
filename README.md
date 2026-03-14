@@ -1,5 +1,7 @@
 # Neovim N Λ N O Theme
 
+<p align="center"><img src="screenshots/nano-theme-nvim.png" alt="nano-theme.nvim"></p>
+
 This package contains my attempt to replicate in Neovim the incredible work of @rougier in
 [N Λ N O Theme](https://github.com/rougier/nano-theme) for Emacs.
 
