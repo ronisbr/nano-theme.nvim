@@ -28,6 +28,15 @@
 
 local M = {}
 
+M.options = {
+  light_variant = "default",
+  dark_variant  = "default",
+}
+
+function M.setup(options)
+  M.options = vim.tbl_deep_extend("force", M.options, options or {})
+end
+
 function M.load()
   -- Clear all the current highlights.
   vim.cmd([[hi clear]])

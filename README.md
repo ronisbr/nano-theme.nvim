@@ -48,15 +48,39 @@ accessibility.
 
 ## Installation
 
-This plugin has been tested with mini.deps the plugin manager but probablly work with any
-other one:
+This plugins has been tested so far using mini.deps as the plugin manager:
 
 ```lua
 MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
-
+vim.o.background = "light" -- or "dark".
 vim.cmd.colorscheme("nano-theme")
-vim.o.background = "light" -- or "dark"
 ```
+
+## Configuration
+
+You can configure the theme variant independently for light and dark backgrounds by calling
+the `setup` function:
+
+```lua
+MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
+vim.o.background = "light" -- or "dark".
+require("nano-theme").setup({
+  light_variant = "default",
+  dark_variant  = "default",
+})
+vim.cmd.colorscheme("nano-theme")
+```
+
+### Variants
+
+| Variant       | Description                                                                                                      |
+|:--------------|:-----------------------------------------------------------------------------------------------------------------|
+| `default`     | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme.                                      |
+| `black_white` | High-contrast variant with near-pure black/white backgrounds and swapped salient/popout hues for extra clarity.  |
+| `blue`        | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones.                            |
+| `green`       | Nature-inspired palette with green-tinted backgrounds and earthy accents.                                        |
+| `gray`        | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel.    |
+
 ## Screenshots
 
 ![Light Theme](./screenshots/screenshot_light_01.png)
