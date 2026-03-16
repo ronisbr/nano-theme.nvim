@@ -95,8 +95,8 @@ function M.get()
 
     ["@text"]                  = { link = "String" },
     ["@text.danger"]           = c.nano_critical,
-    ["@text.diff.add"]         = { link = "diffAdded" },
-    ["@text.diff.delete"]      = { link = "diffRemoved" },
+    ["@text.diff.add"]         = { link = "DiffAdded" },
+    ["@text.diff.delete"]      = { link = "DiffRemoved" },
     ["@text.emphasis"]         = { fg = c.nano_faded_color, italic = true },
     ["@text.environment"]      = c.nano_salient,
     ["@text.environment.name"] = c.nano_faded,

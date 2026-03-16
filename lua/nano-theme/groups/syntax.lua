@@ -37,6 +37,7 @@ function M.get()
     Operator       = c.nano_foreground,
     PreCondit      = c.nano_salient,
     PreProc        = c.nano_salient,
+    Removed        = c.nano_faded,
     Repeat         = c.nano_salient,
     Special        = c.nano_salient,
     SpecialChar    = c.nano_salient,
@@ -54,15 +55,10 @@ function M.get()
 
     -- Diff --------------------------------------------------------------------------------
 
-    DiffAdd     = c.nano_salient,
-    DiffChange  = c.nano_popout,
-    DiffDelete  = c.nano_faded,
+    DiffAdd     = { fg = c.nano_background_color, bg = c.nano_salient_color },
+    DiffChange  = { fg = c.nano_background_color, bg = c.nano_popout_color },
+    DiffDelete  = { fg = c.nano_background_color, bg = c.nano_faded_color },
     DiffText    = { bg = c.nano_subtle_color },
-    diffAdded   = c.nano_salient,
-    diffChanged = c.nano_popout,
-    diffNewFile = c.nano_strong,
-    diffOldFile = c.nano_strong,
-    diffRemoved = c.nano_faded,
   }
 end
 
