@@ -73,15 +73,16 @@ vim.cmd.colorscheme("nano-theme")
 
 ### Variants
 
-| Variant    | Description                                                                                                   |
-|:-----------|:--------------------------------------------------------------------------------------------------------------|
-| `blue`     | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones.                         |
-| `default`  | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme.                                   |
-| `gray`     | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel. |
-| `green`    | Nature-inspired palette with green-tinted backgrounds.                                                        |
-| `ink`      | High-contrast variant with near-pure black/white backgrounds and warm amber/blue accent hues.                 |
-| `orange`   | Warm, earthy palette with orange-tinted backgrounds and amber accents.                                        |
-| `rougier`  | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications.                  |
+| Variant | Description |
+|:--|:--|
+| `blue` | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones. |
+| `default` | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme. |
+| `gray` | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel. |
+| `green` | Nature-inspired palette with green-tinted backgrounds. |
+| `ink` | High-contrast variant with near-pure black/white backgrounds and warm amber/blue accent hues. |
+| `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
+| `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
+| `rougier` | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications. |
 
 ### Changing the Variant at Runtime
 

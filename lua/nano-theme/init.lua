@@ -45,6 +45,7 @@ local light_variant_list = {
   "gray",
   "green",
   "ink",
+  "old_terminal",
   "orange",
   "rougier"
 }
@@ -55,6 +56,7 @@ local dark_variant_list  = {
   "gray",
   "green",
   "ink",
+  "old_terminal",
   "orange",
   "rougier"
 }
