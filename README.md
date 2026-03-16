@@ -78,8 +78,25 @@ vim.cmd.colorscheme("nano-theme")
 | `default`     | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme.                                      |
 | `black_white` | High-contrast variant with near-pure black/white backgrounds and swapped salient/popout hues for extra clarity.  |
 | `blue`        | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones.                            |
-| `green`       | Nature-inspired palette with green-tinted backgrounds and earthy accents.                                        |
+| `green`       | Nature-inspired palette with green-tinted backgrounds.                                                           |
 | `gray`        | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel.    |
+| `rougier`     | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications.                    |
+
+### Changing the Variant at Runtime
+
+You can interactively select the variant for the current background using the provided
+functions:
+
+```lua
+-- Open an interactive selector to change the light theme variant.
+require("nano-theme").select_light_variant()
+
+-- Open an interactive selector to change the dark theme variant.
+require("nano-theme").select_dark_variant()
+```
+
+These functions open a `vim.ui.select` prompt listing all available variants. After
+selecting one, the theme is reloaded immediately.
 
 ## Screenshots
 
