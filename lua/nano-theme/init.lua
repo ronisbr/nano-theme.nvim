@@ -40,20 +40,22 @@ function M.setup(options)
 end
 
 local light_variant_list = {
-  "default",
-  "black_white",
   "blue",
-  "green",
+  "default",
   "gray",
+  "green",
+  "ink",
+  "orange",
   "rougier"
 }
 
 local dark_variant_list  = {
-  "default",
-  "black_white",
   "blue",
-  "green",
+  "default",
   "gray",
+  "green",
+  "ink",
+  "orange",
   "rougier"
 }
 

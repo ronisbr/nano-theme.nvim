@@ -78,6 +78,106 @@ local function build_colors(raw)
   }
 end
 
+-- Blue Variant ----------------------------------------------------------------------------
+
+--- Return the color table for the blue light variant.
+---@return table Color table for the blue light variant.
+local function blue_light()
+  local base6   = "#384858"
+  local red     = "#C02818"
+  local ice     = "#0F7A60"
+  local yellow  = "#A07000"
+  local blue    = "#1E6AA8"
+  local indigo  = "#4840A8"
+  local cyan    = "#1A8AA8"
+
+  return build_colors({
+    base0 = "#F4F6FA",
+    base1 = "#EAEEf4",
+    base2 = "#DDE4EE",
+    base3 = "#C0CCDC",
+    base4 = "#96A8C0",
+    base5 = "#607888",
+    base6 = base6,
+    base7 = "#141E2C",
+
+    nano_foreground_color = "#243040",
+    nano_background_color = "#F4F6FA",
+    nano_highlight_color  = "#EAEEf4",
+    nano_subtle_color     = "#DDE4EE",
+    nano_veryfaded_color  = "#B0C0D4",
+    nano_faded_color      = "#5A7898",
+    nano_salient_color    = "#1E6AA8",
+    nano_strong_color     = "#101C2C",
+    nano_popout_color     = "#A07000",
+    nano_critical_color   = "#C02818",
+
+    terminal_color_0  = base6,
+    terminal_color_1  = red,
+    terminal_color_2  = ice,
+    terminal_color_3  = yellow,
+    terminal_color_4  = blue,
+    terminal_color_5  = indigo,
+    terminal_color_6  = cyan,
+    terminal_color_8  = base6,
+    terminal_color_9  = red,
+    terminal_color_10 = ice,
+    terminal_color_11 = yellow,
+    terminal_color_12 = blue,
+    terminal_color_13 = indigo,
+    terminal_color_14 = cyan,
+  })
+end
+
+--- Return the color table for the blue dark variant.
+---@return table Color table for the blue dark variant.
+local function blue_dark()
+  local base6   = "#5A7A98"
+  local red     = "#F06040"
+  local ice     = "#38C8E8"
+  local yellow  = "#E8A838"
+  local blue    = "#5AA0D0"
+  local indigo  = "#9E8EE0"
+  local cyan    = "#4AB8D8"
+
+  return build_colors({
+    base0 = "#1E2430",
+    base1 = "#28303E",
+    base2 = "#2E3848",
+    base3 = "#333E50",
+    base4 = "#405060",
+    base5 = "#526070",
+    base6 = base6,
+    base7 = "#C4CED8",
+
+    nano_foreground_color = "#C4CED8",
+    nano_background_color = "#1E2430",
+    nano_highlight_color  = "#28303E",
+    nano_subtle_color     = "#333E50",
+    nano_veryfaded_color  = "#3C4E62",
+    nano_faded_color      = "#6A8AAA",
+    nano_salient_color    = "#5AA0D0",
+    nano_strong_color     = "#E8EEF4",
+    nano_popout_color     = "#E8A838",
+    nano_critical_color   = "#F06040",
+
+    terminal_color_0  = base6,
+    terminal_color_1  = red,
+    terminal_color_2  = ice,
+    terminal_color_3  = yellow,
+    terminal_color_4  = blue,
+    terminal_color_5  = indigo,
+    terminal_color_6  = cyan,
+    terminal_color_8  = base6,
+    terminal_color_9  = red,
+    terminal_color_10 = ice,
+    terminal_color_11 = yellow,
+    terminal_color_12 = blue,
+    terminal_color_13 = indigo,
+    terminal_color_14 = cyan,
+  })
+end
+
 -- Default Variant -------------------------------------------------------------------------
 
 --- Return the color table for the default light variant.
@@ -178,61 +278,12 @@ local function default_dark()
   })
 end
 
--- Black-White Variant ---------------------------------------------------------------------
+-- Gray Variant  ---------------------------------------------------------------------------
 
---- Return the color table for the black-white dark variant.
----@return table Color table for the black-white dark variant.
-local function black_white_dark()
-  local base6   = "#707070"
-  local red     = "#E84040"
-  local green   = "#50B060"
-  local yellow  = "#D4B030"
-  local blue    = "#5090D0"
-  local magenta = "#A050C0"
-  local cyan    = "#20B0C8"
-
-  return build_colors({
-    base0 = "#0E0E10",
-    base1 = "#1A1A1C",
-    base2 = "#242426",
-    base3 = "#303032",
-    base4 = "#484848",
-    base5 = "#585858",
-    base6 = base6,
-    base7 = "#F0F0EC",
-
-    nano_foreground_color = "#C8C8C0",
-    nano_background_color = "#0E0E10",
-    nano_highlight_color  = "#1A1A1C",
-    nano_subtle_color     = "#242426",
-    nano_veryfaded_color  = "#2E2E30",
-    nano_faded_color      = "#707070",
-    nano_salient_color    = "#D4924A",
-    nano_strong_color     = "#F0F0EC",
-    nano_popout_color     = "#78AACC",
-    nano_critical_color   = "#E05030",
-
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = green,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = magenta,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = green,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = magenta,
-    terminal_color_14 = cyan,
-  })
-end
-
---- Return the color table for the black-white light variant.
----@return table Color table for the black-white light variant.
-local function black_white_light()
-  local base6   = "#484840"
+--- Return the color table for the gray light variant.
+---@return table Color table for the gray light variant.
+local function gray_light()
+  local base6   = "#606060"
   local red     = "#B82020"
   local green   = "#2E7A38"
   local yellow  = "#A88000"
@@ -241,25 +292,25 @@ local function black_white_light()
   local cyan    = "#0E8090"
 
   return build_colors({
-    base0 = "#F8F8F4",
-    base1 = "#F0F0EC",
-    base2 = "#E4E4DE",
-    base3 = "#C8C8C0",
-    base4 = "#A0A098",
-    base5 = "#707070",
+    base0 = "#F6F6F4",
+    base1 = "#EEEEEC",
+    base2 = "#E2E2E0",
+    base3 = "#C8C8C8",
+    base4 = "#A4A4A4",
+    base5 = "#787878",
     base6 = base6,
-    base7 = "#141414",
+    base7 = "#101010",
 
-    nano_foreground_color = "#1A1A18",
-    nano_background_color = "#F8F8F4",
-    nano_highlight_color  = "#F0F0EC",
-    nano_subtle_color     = "#E4E4DE",
-    nano_veryfaded_color  = "#C0C0B8",
-    nano_faded_color      = "#848480",
-    nano_salient_color    = "#A06020",
-    nano_strong_color     = "#141414",
-    nano_popout_color     = "#2E5E8A",
-    nano_critical_color   = "#B82010",
+    nano_foreground_color = "#1C1C1C",
+    nano_background_color = "#F6F6F4",
+    nano_highlight_color  = "#EEEEEC",
+    nano_subtle_color     = "#E2E2E0",
+    nano_veryfaded_color  = "#C4C4C4",
+    nano_faded_color      = "#888888",
+    nano_salient_color    = "#404040",
+    nano_strong_color     = "#101010",
+    nano_popout_color     = "#606060",
+    nano_critical_color   = "#CC2800",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,
@@ -278,102 +329,51 @@ local function black_white_light()
   })
 end
 
--- Blue Variant ----------------------------------------------------------------------------
-
---- Return the color table for the blue light variant.
----@return table Color table for the blue light variant.
-local function blue_light()
-  local base6   = "#384858"
-  local red     = "#C02818"
-  local ice     = "#0F7A60"
-  local yellow  = "#A07000"
-  local blue    = "#1E6AA8"
-  local indigo  = "#4840A8"
-  local cyan    = "#1A8AA8"
+--- Return the color table for the gray dark variant.
+---@return table Color table for the gray dark variant.
+local function gray_dark()
+  local base6   = "#686868"
+  local red     = "#E84040"
+  local green   = "#50B060"
+  local yellow  = "#D4B030"
+  local blue    = "#5090D0"
+  local magenta = "#A050C0"
+  local cyan    = "#20B0C8"
 
   return build_colors({
-    base0 = "#F4F6FA",
-    base1 = "#EAEEf4",
-    base2 = "#DDE4EE",
-    base3 = "#C0CCDC",
-    base4 = "#96A8C0",
-    base5 = "#607888",
+    base0 = "#1C1C1C",
+    base1 = "#262626",
+    base2 = "#303030",
+    base3 = "#3C3C3C",
+    base4 = "#505050",
+    base5 = "#585858",
     base6 = base6,
-    base7 = "#141E2C",
+    base7 = "#ECECEC",
 
-    nano_foreground_color = "#243040",
-    nano_background_color = "#F4F6FA",
-    nano_highlight_color  = "#EAEEf4",
-    nano_subtle_color     = "#DDE4EE",
-    nano_veryfaded_color  = "#B0C0D4",
-    nano_faded_color      = "#5A7898",
-    nano_salient_color    = "#1E6AA8",
-    nano_strong_color     = "#101C2C",
-    nano_popout_color     = "#A07000",
-    nano_critical_color   = "#C02818",
+    nano_foreground_color = "#C0C0C0",
+    nano_background_color = "#1C1C1C",
+    nano_highlight_color  = "#262626",
+    nano_subtle_color     = "#303030",
+    nano_veryfaded_color  = "#383838",
+    nano_faded_color      = "#686868",
+    nano_salient_color    = "#909090",
+    nano_strong_color     = "#ECECEC",
+    nano_popout_color     = "#A8A8A8",
+    nano_critical_color   = "#E04020",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,
-    terminal_color_2  = ice,
+    terminal_color_2  = green,
     terminal_color_3  = yellow,
     terminal_color_4  = blue,
-    terminal_color_5  = indigo,
+    terminal_color_5  = magenta,
     terminal_color_6  = cyan,
     terminal_color_8  = base6,
     terminal_color_9  = red,
-    terminal_color_10 = ice,
+    terminal_color_10 = green,
     terminal_color_11 = yellow,
     terminal_color_12 = blue,
-    terminal_color_13 = indigo,
-    terminal_color_14 = cyan,
-  })
-end
-
---- Return the color table for the blue dark variant.
----@return table Color table for the blue dark variant.
-local function blue_dark()
-  local base6   = "#5A7A98"
-  local red     = "#F06040"
-  local ice     = "#38C8E8"
-  local yellow  = "#E8A838"
-  local blue    = "#5AA0D0"
-  local indigo  = "#9E8EE0"
-  local cyan    = "#4AB8D8"
-
-  return build_colors({
-    base0 = "#1E2430",
-    base1 = "#28303E",
-    base2 = "#2E3848",
-    base3 = "#333E50",
-    base4 = "#405060",
-    base5 = "#526070",
-    base6 = base6,
-    base7 = "#C4CED8",
-
-    nano_foreground_color = "#C4CED8",
-    nano_background_color = "#1E2430",
-    nano_highlight_color  = "#28303E",
-    nano_subtle_color     = "#333E50",
-    nano_veryfaded_color  = "#3C4E62",
-    nano_faded_color      = "#6A8AAA",
-    nano_salient_color    = "#5AA0D0",
-    nano_strong_color     = "#E8EEF4",
-    nano_popout_color     = "#E8A838",
-    nano_critical_color   = "#F06040",
-
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = ice,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = indigo,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = ice,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = indigo,
+    terminal_color_13 = magenta,
     terminal_color_14 = cyan,
   })
 end
@@ -478,39 +478,39 @@ local function green_dark()
   })
 end
 
--- Gray Variant  ---------------------------------------------------------------------------
+-- Ink Variant -----------------------------------------------------------------------------
 
---- Return the color table for the gray dark variant.
----@return table Color table for the gray dark variant.
-local function gray_dark()
-  local base6   = "#686868"
-  local red     = "#E84040"
-  local green   = "#50B060"
-  local yellow  = "#D4B030"
-  local blue    = "#5090D0"
-  local magenta = "#A050C0"
-  local cyan    = "#20B0C8"
+--- Return the color table for the ink light variant.
+---@return table Color table for the ink light variant.
+local function ink_light()
+  local base6   = "#484840"
+  local red     = "#B82020"
+  local green   = "#2E7A38"
+  local yellow  = "#A88000"
+  local blue    = "#1E5490"
+  local magenta = "#7A2888"
+  local cyan    = "#0E8090"
 
   return build_colors({
-    base0 = "#1C1C1C",
-    base1 = "#262626",
-    base2 = "#303030",
-    base3 = "#3C3C3C",
-    base4 = "#505050",
-    base5 = "#585858",
+    base0 = "#F8F8F4",
+    base1 = "#F0F0EC",
+    base2 = "#E4E4DE",
+    base3 = "#C8C8C0",
+    base4 = "#A0A098",
+    base5 = "#707070",
     base6 = base6,
-    base7 = "#ECECEC",
+    base7 = "#141414",
 
-    nano_foreground_color = "#C0C0C0",
-    nano_background_color = "#1C1C1C",
-    nano_highlight_color  = "#262626",
-    nano_subtle_color     = "#303030",
-    nano_veryfaded_color  = "#383838",
-    nano_faded_color      = "#686868",
-    nano_salient_color    = "#909090",
-    nano_strong_color     = "#ECECEC",
-    nano_popout_color     = "#A8A8A8",
-    nano_critical_color   = "#E04020",
+    nano_foreground_color = "#1A1A18",
+    nano_background_color = "#F8F8F4",
+    nano_highlight_color  = "#F0F0EC",
+    nano_subtle_color     = "#E4E4DE",
+    nano_veryfaded_color  = "#C0C0B8",
+    nano_faded_color      = "#848480",
+    nano_salient_color    = "#A06020",
+    nano_strong_color     = "#141414",
+    nano_popout_color     = "#2E5E8A",
+    nano_critical_color   = "#B82010",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,
@@ -529,37 +529,137 @@ local function gray_dark()
   })
 end
 
---- Return the color table for the gray light variant.
----@return table Color table for the gray light variant.
-local function gray_light()
-  local base6   = "#606060"
-  local red     = "#B82020"
-  local green   = "#2E7A38"
-  local yellow  = "#A88000"
-  local blue    = "#1E5490"
-  local magenta = "#7A2888"
-  local cyan    = "#0E8090"
+--- Return the color table for the ink dark variant.
+---@return table Color table for the ink dark variant.
+local function ink_dark()
+  local base6   = "#707070"
+  local red     = "#E84040"
+  local green   = "#50B060"
+  local yellow  = "#D4B030"
+  local blue    = "#5090D0"
+  local magenta = "#A050C0"
+  local cyan    = "#20B0C8"
 
   return build_colors({
-    base0 = "#F6F6F4",
-    base1 = "#EEEEEC",
-    base2 = "#E2E2E0",
-    base3 = "#C8C8C8",
-    base4 = "#A4A4A4",
-    base5 = "#787878",
+    base0 = "#0E0E10",
+    base1 = "#1A1A1C",
+    base2 = "#242426",
+    base3 = "#303032",
+    base4 = "#484848",
+    base5 = "#585858",
     base6 = base6,
-    base7 = "#101010",
+    base7 = "#F0F0EC",
 
-    nano_foreground_color = "#1C1C1C",
-    nano_background_color = "#F6F6F4",
-    nano_highlight_color  = "#EEEEEC",
-    nano_subtle_color     = "#E2E2E0",
-    nano_veryfaded_color  = "#C4C4C4",
-    nano_faded_color      = "#888888",
-    nano_salient_color    = "#404040",
-    nano_strong_color     = "#101010",
-    nano_popout_color     = "#606060",
-    nano_critical_color   = "#CC2800",
+    nano_foreground_color = "#C8C8C0",
+    nano_background_color = "#0E0E10",
+    nano_highlight_color  = "#1A1A1C",
+    nano_subtle_color     = "#242426",
+    nano_veryfaded_color  = "#2E2E30",
+    nano_faded_color      = "#707070",
+    nano_salient_color    = "#D4924A",
+    nano_strong_color     = "#F0F0EC",
+    nano_popout_color     = "#78AACC",
+    nano_critical_color   = "#E05030",
+
+    terminal_color_0  = base6,
+    terminal_color_1  = red,
+    terminal_color_2  = green,
+    terminal_color_3  = yellow,
+    terminal_color_4  = blue,
+    terminal_color_5  = magenta,
+    terminal_color_6  = cyan,
+    terminal_color_8  = base6,
+    terminal_color_9  = red,
+    terminal_color_10 = green,
+    terminal_color_11 = yellow,
+    terminal_color_12 = blue,
+    terminal_color_13 = magenta,
+    terminal_color_14 = cyan,
+  })
+end
+
+-- Orange Variant --------------------------------------------------------------------------
+
+--- Return the color table for the orange light variant.
+---@return table Color table for the orange light variant.
+local function orange_light()
+  local base6   = "#6A5038"
+  local red     = "#B82020"
+  local green   = "#2E7A38"
+  local yellow  = "#887800"
+  local blue    = "#1A5888"
+  local magenta = "#882878"
+  local cyan    = "#0A7070"
+
+  return build_colors({
+    base0 = "#FAF6F0",
+    base1 = "#F2EAE0",
+    base2 = "#E8DECE",
+    base3 = "#D4C4A8",
+    base4 = "#B8A888",
+    base5 = "#9A8868",
+    base6 = base6,
+    base7 = "#1A1208",
+
+    nano_foreground_color = "#3A2C18",
+    nano_background_color = "#FAF6F0",
+    nano_highlight_color  = "#F2EAE0",
+    nano_subtle_color     = "#E8DECE",
+    nano_veryfaded_color  = "#CEC0A8",
+    nano_faded_color      = "#8A7058",
+    nano_salient_color    = "#A05C18",
+    nano_strong_color     = "#1A1208",
+    nano_popout_color     = "#2E6890",
+    nano_critical_color   = "#C02800",
+
+    terminal_color_0  = base6,
+    terminal_color_1  = red,
+    terminal_color_2  = green,
+    terminal_color_3  = yellow,
+    terminal_color_4  = blue,
+    terminal_color_5  = magenta,
+    terminal_color_6  = cyan,
+    terminal_color_8  = base6,
+    terminal_color_9  = red,
+    terminal_color_10 = green,
+    terminal_color_11 = yellow,
+    terminal_color_12 = blue,
+    terminal_color_13 = magenta,
+    terminal_color_14 = cyan,
+  })
+end
+
+--- Return the color table for the orange dark variant.
+---@return table Color table for the orange dark variant.
+local function orange_dark()
+  local base6   = "#906848"
+  local red     = "#E84040"
+  local green   = "#60B870"
+  local yellow  = "#DCC858"
+  local blue    = "#5090C8"
+  local magenta = "#C060B0"
+  local cyan    = "#30B8C0"
+
+  return build_colors({
+    base0 = "#2C2016",
+    base1 = "#382A1C",
+    base2 = "#443420",
+    base3 = "#503E28",
+    base4 = "#604830",
+    base5 = "#705840",
+    base6 = base6,
+    base7 = "#F0EAE0",
+
+    nano_foreground_color = "#D4C8B0",
+    nano_background_color = "#2C2016",
+    nano_highlight_color  = "#382A1C",
+    nano_subtle_color     = "#443420",
+    nano_veryfaded_color  = "#4E3C28",
+    nano_faded_color      = "#7A6040",
+    nano_salient_color    = "#D48A42",
+    nano_strong_color     = "#F0EAE0",
+    nano_popout_color     = "#6A9AB8",
+    nano_critical_color   = "#E04020",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,
@@ -688,21 +788,23 @@ end
 
 -- Variant dispatch tables.
 local light_variants = {
-  default     = default_light,
-  black_white = black_white_light,
-  blue        = blue_light,
-  green       = green_light,
-  gray        = gray_light,
-  rougier     = rougier_light,
+  blue     = blue_light,
+  default  = default_light,
+  gray     = gray_light,
+  green    = green_light,
+  ink      = ink_light,
+  orange   = orange_light,
+  rougier  = rougier_light,
 }
 
 local dark_variants = {
-  default     = default_dark,
-  black_white = black_white_dark,
-  blue        = blue_dark,
-  green       = green_dark,
-  gray        = gray_dark,
-  rougier     = rougier_dark,
+  blue     = blue_dark,
+  default  = default_dark,
+  gray     = gray_dark,
+  green    = green_dark,
+  ink      = ink_dark,
+  orange   = orange_dark,
+  rougier  = rougier_dark,
 }
 
 --- Return the color table for the currently active background and variant.
