@@ -33,10 +33,69 @@ M.options = {
   dark_variant  = "default",
 }
 
+--- Set up the theme with the provided options, merging them into the defaults.
+---@param options table|nil Table with configuration options to override the defaults.
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", M.options, options or {})
 end
 
+local light_variant_list = {
+  "default",
+  "black_white",
+  "blue",
+  "green",
+  "gray",
+  "rougier"
+}
+
+local dark_variant_list  = {
+  "default",
+  "black_white",
+  "blue",
+  "green",
+  "gray",
+  "rougier"
+}
+
+--- Open an interactive selector to choose the light theme variant and reload the theme.
+function M.select_light_variant()
+  vim.ui.select(
+    light_variant_list,
+    {
+      prompt = "Select light theme variant:",
+    },
+    function(choice)
+      if choice then
+        M.options.light_variant = choice
+        M.load()
+
+        -- Notify plugins that the colorscheme has changed.
+        vim.api.nvim_exec_autocmds("ColorScheme", { modeline = false })
+      end
+    end
+  )
+end
+
+--- Open an interactive selector to choose the dark theme variant and reload the theme.
+function M.select_dark_variant()
+  vim.ui.select(
+    dark_variant_list,
+    {
+      prompt = "Select dark theme variant:",
+    },
+    function(choice)
+      if choice then
+        M.options.dark_variant = choice
+        M.load()
+
+        -- Notify plugins that the colorscheme has changed.
+        vim.api.nvim_exec_autocmds("ColorScheme", { modeline = false })
+      end
+    end
+  )
+end
+
+--- Load and apply the theme, setting all highlight groups and terminal colors.
 function M.load()
   -- Clear all the current highlights.
   vim.cmd([[hi clear]])
@@ -74,7 +133,7 @@ function M.load()
     "treesitter",
   }
 
-  for k, i in ipairs(integrations) do
+  for _, i in ipairs(integrations) do
     local g = require("nano-theme.groups.integrations." .. i).get()
 
     for name, val in pairs(g) do
