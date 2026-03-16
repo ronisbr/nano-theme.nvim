@@ -6,6 +6,8 @@
 
 local M = {}
 
+--- Return the highlight group table for telescope integration.
+---@return table Map of telescope highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

@@ -6,6 +6,8 @@
 
 local M = {}
 
+--- Return the highlight group table for fzf-lua integration.
+---@return table Map of fzf-lua highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

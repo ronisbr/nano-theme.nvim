@@ -6,6 +6,8 @@
 
 local M = {}
 
+--- Return the highlight group table for noice integration.
+---@return table Map of noice highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

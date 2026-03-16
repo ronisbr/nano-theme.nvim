@@ -6,6 +6,8 @@
 
 local M = {}
 
+--- Return the highlight group table for syntax elements.
+---@return table Map of highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 
