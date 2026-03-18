@@ -12,8 +12,8 @@ local M = {}
 
 --- Build the full color table from the raw color values and terminal color mapping.
 ---@param raw table Table of raw hex color strings and terminal color values.
----@return table Color table with named semantic colors, highlight decorations, and terminal
----              colors.
+---@return table # Color table with named semantic colors, highlight decorations, and
+---                terminal colors.
 local function build_colors(raw)
   return {
     -- Base Ramp ---------------------------------------------------------------------------
@@ -81,7 +81,7 @@ end
 -- Blue Variant ----------------------------------------------------------------------------
 
 --- Return the color table for the blue light variant.
----@return table Color table for the blue light variant.
+---@return table # Color table for the blue light variant.
 local function blue_light()
   local base6   = "#384858"
   local red     = "#C02818"
@@ -130,7 +130,7 @@ local function blue_light()
 end
 
 --- Return the color table for the blue dark variant.
----@return table Color table for the blue dark variant.
+---@return table # Color table for the blue dark variant.
 local function blue_dark()
   local base6   = "#5A7A98"
   local red     = "#F06040"
@@ -181,7 +181,7 @@ end
 -- Default Variant -------------------------------------------------------------------------
 
 --- Return the color table for the default light variant.
----@return table Color table for the default light variant.
+---@return table # Color table for the default light variant.
 local function default_light()
   local base6   = "#484840"
   local red     = "#C03830"
@@ -230,7 +230,7 @@ local function default_light()
 end
 
 --- Return the color table for the default dark variant.
----@return table Color table for the default dark variant.
+---@return table # Color table for the default dark variant.
 local function default_dark()
   local base6   = "#908E88"
   local red     = "#E84040"
@@ -281,7 +281,7 @@ end
 -- Gray Variant  ---------------------------------------------------------------------------
 
 --- Return the color table for the gray light variant.
----@return table Color table for the gray light variant.
+---@return table # Color table for the gray light variant.
 local function gray_light()
   local base6   = "#606060"
   local red     = "#B82020"
@@ -330,7 +330,7 @@ local function gray_light()
 end
 
 --- Return the color table for the gray dark variant.
----@return table Color table for the gray dark variant.
+---@return table # Color table for the gray dark variant.
 local function gray_dark()
   local base6   = "#686868"
   local red     = "#E84040"
@@ -381,7 +381,7 @@ end
 -- Green Variant ---------------------------------------------------------------------------
 
 --- Return the color table for the green light variant.
----@return table Color table for the green light variant.
+---@return table # Color table for the green light variant.
 local function green_light()
   local base6   = "#3A5C3A"
   local red     = "#C03830"
@@ -430,7 +430,7 @@ local function green_light()
 end
 
 --- Return the color table for the green dark variant.
----@return table Color table for the green dark variant.
+---@return table # Color table for the green dark variant.
 local function green_dark()
   local base6   = "#6E8A70"
   local red     = "#E84040"
@@ -481,7 +481,7 @@ end
 -- Ink Variant -----------------------------------------------------------------------------
 
 --- Return the color table for the ink light variant.
----@return table Color table for the ink light variant.
+---@return table # Color table for the ink light variant.
 local function ink_light()
   local base6   = "#484840"
   local red     = "#B82020"
@@ -530,7 +530,7 @@ local function ink_light()
 end
 
 --- Return the color table for the ink dark variant.
----@return table Color table for the ink dark variant.
+---@return table # Color table for the ink dark variant.
 local function ink_dark()
   local base6   = "#707070"
   local red     = "#E84040"
@@ -581,7 +581,7 @@ end
 -- Old Terminal ----------------------------------------------------------------------------
 
 --- Return the color table for the old terminal light variant.
----@return table Color table for the old terminal light variant.
+---@return table # Color table for the old terminal light variant.
 local function old_terminal_light()
   local base6   = "#3A6A3A"
   local red     = "#901808"
@@ -630,7 +630,7 @@ local function old_terminal_light()
 end
 
 --- Return the color table for the old terminal dark variant.
----@return table Color table for the old terminal dark variant.
+---@return table # Color table for the old terminal dark variant.
 local function old_terminal_dark()
   local base6   = "#3A7A3A"
   local red     = "#C83020"
@@ -681,7 +681,7 @@ end
 -- Orange Variant --------------------------------------------------------------------------
 
 --- Return the color table for the orange light variant.
----@return table Color table for the orange light variant.
+---@return table # Color table for the orange light variant.
 local function orange_light()
   local base6   = "#6A5038"
   local red     = "#B82020"
@@ -730,7 +730,7 @@ local function orange_light()
 end
 
 --- Return the color table for the orange dark variant.
----@return table Color table for the orange dark variant.
+---@return table # Color table for the orange dark variant.
 local function orange_dark()
   local base6   = "#906848"
   local red     = "#E84040"
@@ -780,9 +780,9 @@ end
 
 -- Rougier's Variant -----------------------------------------------------------------------
 
---- Return the color table for th Rougier's light variant, the original variant of NANO
+--- Return the color table for the Rougier's light variant, the original variant of NANO
 --- theme.
----@return table Color table for the rougier's light variant.
+---@return table # Color table for the Rougier's light variant.
 local function rougier_light()
   local base6   = "#546E7A"  -- Blue Grey / L600
   local red     = "#B71C1C"  -- Material Red / L900
@@ -831,9 +831,9 @@ local function rougier_light()
   })
 end
 
---- Return the color table for th Rougier's dark variant, the original variant of NANO
+--- Return the color table for the Rougier's dark variant, the original variant of NANO
 --- theme.
----@return table Color table for the rougier's dark variant.
+---@return table # Color table for the Rougier's dark variant.
 local function rougier_dark()
   local base6   = "#7B88A1"  -- Nord between Polar Night and Snow Storm
   local red     = "#BF616A"  -- Nord Aurora / nord11
@@ -910,7 +910,7 @@ local dark_variants = {
 }
 
 --- Return the color table for the currently active background and variant.
----@return table Color table for the active theme variant.
+---@return table # Color table for the active theme variant.
 function M.get()
   local opts     = require("nano-theme").options
   local is_light = vim.o.background == "light"

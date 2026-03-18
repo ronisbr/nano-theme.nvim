@@ -7,7 +7,7 @@
 local M = {}
 
 --- Return the highlight group table for neogit integration.
----@return table Map of neogit highlight group names to their attribute tables.
+---@return table # Map of neogit highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

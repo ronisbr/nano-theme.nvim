@@ -7,7 +7,7 @@
 local M = {}
 
 --- Return the highlight group table for mini.nvim integration.
----@return table Map of mini.nvim highlight group names to their attribute tables.
+---@return table # Map of mini.nvim highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

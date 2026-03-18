@@ -7,7 +7,7 @@
 local M = {}
 
 --- Return the highlight group table for neo-tree integration.
----@return table Map of neo-tree highlight group names to their attribute tables.
+---@return table # Map of neo-tree highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 

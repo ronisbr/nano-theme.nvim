@@ -7,7 +7,7 @@
 local M = {}
 
 --- Return the highlight group table for dashboard integration.
----@return table Map of dashboard highlight group names to their attribute tables.
+---@return table # Map of dashboard highlight group names to their attribute tables.
 function M.get()
   local c = require("nano-theme.colors").get()
 
