@@ -124,6 +124,7 @@ function M.load()
 
   -- List of available integrations.
   local integrations = {
+    "copilot",
     "dashboard",
     "fzf-lua",
     "indent-blankline",
