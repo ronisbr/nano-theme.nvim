@@ -9,9 +9,7 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 
 - **Critical face** is for information that requires immediate action.
 
-> It should be of high contrast when compared to other faces. This can be realized (for
-> example) by setting an intense background color, typically a shade of red. It must be used
-> scarcely.
+> It should be of high contrast when compared to other faces. It must be used scarcely.
 
 - **Popout face** is used for information that needs attention.
 
@@ -21,7 +19,7 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 - **Strong face** is used for information of a structural nature.
 
 > It has to be the same color as the default color and only the weight differs by one level
-> (e.g., light/regular or regular/bold). IT is generally used for titles, keywords,
+> (e.g., light/regular or regular/bold). It is generally used for titles, keywords,
 > directory, etc.
 
 - **Salient face** is used for information that are important.
@@ -32,7 +30,7 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 
 - **Faded face** is for information that are less important.
 
-> It is made by using the same hue as the default but with a lesser intensity than the
+> It is made by using a hue similar to the default face but with a lesser intensity than the
 > default. It can be used for comments, secondary information and also replace italic (which
 > is generally abused anyway
 
@@ -48,10 +46,10 @@ accessibility.
 
 ## Installation
 
-This plugins has been tested so far using mini.deps as the plugin manager:
+The suggested installation method is using `vim.pack.add` in Neovim v0.12+:
 
 ```lua
-MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
+vim.pack.add({ "ronisbr/nano-theme.nvim" })
 vim.o.background = "light" -- or "dark".
 vim.cmd.colorscheme("nano-theme")
 ```
