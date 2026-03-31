@@ -43,6 +43,7 @@ function M.get()
     MiniStarterSection    = c.nano_strong,
     MiniStarterQuery      = { fg = c.nano_popout_color, bold = true },
     MiniStarterItemPrefix = { fg = c.nano_salient_color, bold = true },
+    MiniStarterFooter     = { link = "Comment" },
 
     -- mini.snippets -----------------------------------------------------------------------
 
