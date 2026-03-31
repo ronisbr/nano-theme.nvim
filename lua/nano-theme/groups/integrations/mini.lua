@@ -38,6 +38,12 @@ function M.get()
     MiniPickPreviewRegion = { bg = c.nano_subtle_color },
     MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
 
+    -- mini.starter ------------------------------------------------------------------------
+
+    MiniStarterSection    = c.nano_strong,
+    MiniStarterQuery      = { fg = c.nano_popout_color, bold = true },
+    MiniStarterItemPrefix = { fg = c.nano_salient_color, bold = true },
+
     -- mini.snippets -----------------------------------------------------------------------
 
     MiniSnippetsCurrent        = c.nano_popout,
