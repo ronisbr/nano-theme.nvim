@@ -24,6 +24,13 @@ function M.get()
 
     MiniIndentscopeSymbol = c.nano_veryfaded,
 
+    -- mini.hipatterns ---------------------------------------------------------------------
+
+    MiniHipatternsFixme = { fg = c.bg, bg = c.nano_critical_color, bold = true },
+    MiniHipatternsHack  = { fg = c.bg, bg = c.nano_popout_color,   bold = true },
+    MiniHipatternsNote  = { fg = c.bg, bg = c.nano_faded_color,    bold = true },
+    MiniHipatternsTodo  = { fg = c.bg, bg = c.nano_salient_color,  bold = true },
+
     -- mini.notify -------------------------------------------------------------------------
 
     MiniNotifyNormal = { link = "Normal" },
