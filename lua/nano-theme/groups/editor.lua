@@ -43,6 +43,7 @@ function M.get()
     PmenuSbar     = { bg = c.nano_faded_color },
     PmenuSel      = { bg = c.nano_subtle_color },
     PmenuThumb    = { bg = c.nano_foreground_color },
+    OkMsg         = c.nano_salient,
     Question      = c.nano_foreground,
     QuickFixLine  = c.nano_salient,
     Search        = { bg = c.nano_subtle_color },
