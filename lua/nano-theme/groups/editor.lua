@@ -34,6 +34,7 @@ function M.get()
     ModeMsg       = c.nano_faded,
     MoreMsg       = c.nano_foreground,
     MsgSeparator  = {},
+    MsgArea       = { bg = c.nano_subtle_color },
     NonText       = { fg = c.nano_veryfaded_color, italic = true },
     Normal        = { fg = c.fg, bg = c.bg },
     NormalFloat   = { link = "Normal" },
