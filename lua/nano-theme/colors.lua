@@ -209,7 +209,7 @@ local function default_light()
     nano_faded_color      = "#6E6C66",
     nano_salient_color    = "#6E4A85",
     nano_strong_color     = "#252520",
-    nano_popout_color     = "#C87820",
+    nano_popout_color     = "#E8A058",
     nano_critical_color   = "#E53500",
 
     terminal_color_0  = base6,
