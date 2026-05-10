@@ -73,6 +73,7 @@ vim.cmd.colorscheme("nano-theme")
 
 | Variant | Description |
 |:--|:--|
+| `amber` | Amber phosphor CRT monitor palette. Dark mode uses a near-black background with warm golden-amber glowing text; light mode uses a warm parchment background with deep amber ink. |
 | `blue` | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones. |
 | `default` | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme. |
 | `gray` | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel. |

@@ -40,6 +40,7 @@ function M.setup(options)
 end
 
 local light_variant_list = {
+  "amber",
   "blue",
   "default",
   "gray",
@@ -51,6 +52,7 @@ local light_variant_list = {
 }
 
 local dark_variant_list  = {
+  "amber",
   "blue",
   "default",
   "gray",
