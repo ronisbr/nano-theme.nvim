@@ -581,39 +581,39 @@ end
 -- Jinx Variant ---------------------------------------------------------------------------
 
 --- Return the color table for the Jinx light variant.
---- Inspired by Jinx from Arcane — near-white background with a blue-tinted base ramp
---- mirroring the dark variant's teal atmosphere, deep cerulean blue salient, vivid pink
---- popout contrasting against the blue environment, and a vivid deep-blue strong.
+--- Inspired by Jinx from Arcane — near-white background with a barely perceptible
+--- lavender tint, magenta-pink salient (her hair), Hextech neon-blue strong, and a
+--- distinct teal-cyan popout, giving three perceptually distinct accents.
 ---@return table # Color table for the Jinx light variant.
 local function jinx_light()
-  local base6   = "#385870"
-  local red     = "#C02828"
-  local green   = "#287A50"
-  local yellow  = "#9A7800"
-  local blue    = "#1A70B0"
-  local magenta = "#C0186A"
-  local cyan    = "#1490A8"
+  local base6   = "#4A4258"
+  local red     = "#B82530"
+  local green   = "#2E7A56"
+  local yellow  = "#9A6A10"
+  local blue    = "#1A6FB8"
+  local magenta = "#A8228A"
+  local cyan    = "#0E7488"
 
   return build_colors({
-    base0 = "#F6F9FD",
-    base1 = "#EBF2F8",
-    base2 = "#DCE8F4",
-    base3 = "#BED4E8",
-    base4 = "#90B4D0",
-    base5 = "#608498",
+    base0 = "#F9F7FB",
+    base1 = "#F0EDF4",
+    base2 = "#E4E0EC",
+    base3 = "#CDC6D6",
+    base4 = "#A39DAE",
+    base5 = "#72697E",
     base6 = base6,
-    base7 = "#102030",
+    base7 = "#181222",
 
-    nano_foreground_color = "#182C3C",
-    nano_background_color = "#F6F9FD",
-    nano_highlight_color  = "#EBF2F8",
-    nano_subtle_color     = "#DCE8F4",
-    nano_veryfaded_color  = "#B8D0E4",
-    nano_faded_color      = "#608498",
-    nano_salient_color    = "#C0186A",
-    nano_strong_color     = "#1060C8",
-    nano_popout_color     = "#1A70B0",
-    nano_critical_color   = "#C02828",
+    nano_foreground_color = "#1F1A28",
+    nano_background_color = "#F9F7FB",
+    nano_highlight_color  = "#F0EDF4",
+    nano_subtle_color     = "#E4E0EC",
+    nano_veryfaded_color  = "#C8C2D2",
+    nano_faded_color      = "#6E687C",
+    nano_salient_color    = "#A8228A",
+    nano_strong_color     = "#0E70D8",
+    nano_popout_color     = "#0E7488",
+    nano_critical_color   = "#B82530",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,
@@ -633,38 +633,39 @@ local function jinx_light()
 end
 
 --- Return the color table for the Jinx dark variant.
---- Inspired by Jinx from Arcane — near-black Zaun night background with a deep purple
---- base ramp, hot pink salient, and electric teal-cyan popout.
+--- Inspired by Jinx from Arcane — near-black background with a barely perceptible
+--- violet tint, hot pink salient (her hair), Hextech neon-blue strong, and electric
+--- teal-cyan popout.
 ---@return table # Color table for the Jinx dark variant.
 local function jinx_dark()
-  local base6   = "#5888A0"
-  local red     = "#FF4840"
-  local green   = "#40B890"
-  local yellow  = "#D8C040"
-  local blue    = "#30B8D8"
-  local magenta = "#E03888"
-  local cyan    = "#28C8C0"
+  local base6   = "#786E98"
+  local red     = "#FF5530"
+  local green   = "#3FC080"
+  local yellow  = "#E8B848"
+  local blue    = "#5AA8FF"
+  local magenta = "#FF1A8E"
+  local cyan    = "#2BE0D8"
 
   return build_colors({
-    base0 = "#080C10",
-    base1 = "#101C22",
-    base2 = "#182830",
-    base3 = "#203440",
-    base4 = "#2C4858",
-    base5 = "#3C6070",
+    base0 = "#0C0A1A",
+    base1 = "#161222",
+    base2 = "#1E1A30",
+    base3 = "#2A2640",
+    base4 = "#3A3454",
+    base5 = "#544C70",
     base6 = base6,
-    base7 = "#D0E4EC",
+    base7 = "#E4DEF0",
 
-    nano_foreground_color = "#B8CCDA",
-    nano_background_color = "#080C10",
-    nano_highlight_color  = "#101C22",
-    nano_subtle_color     = "#203440",
-    nano_veryfaded_color  = "#253C4A",
-    nano_faded_color      = "#406878",
-    nano_salient_color    = "#E03888",
-    nano_strong_color     = "#48B8F8",
-    nano_popout_color     = "#30C0D8",
-    nano_critical_color   = "#FF4840",
+    nano_foreground_color = "#C8C0DC",
+    nano_background_color = "#0C0A1A",
+    nano_highlight_color  = "#161222",
+    nano_subtle_color     = "#2A2640",
+    nano_veryfaded_color  = "#2E2848",
+    nano_faded_color      = "#867EA8",
+    nano_salient_color    = "#FF1A8E",
+    nano_strong_color     = "#1FB6FF",
+    nano_popout_color     = "#2BE0D8",
+    nano_critical_color   = "#FF5530",
 
     terminal_color_0  = base6,
     terminal_color_1  = red,

@@ -79,7 +79,7 @@ vim.cmd.colorscheme("nano-theme")
 | `gray` | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel. |
 | `green` | Nature-inspired palette with green-tinted backgrounds. |
 | `ink` | High-contrast variant with near-pure black/white backgrounds and warm amber/blue accent hues. |
-| `jinx` | Arcane-inspired palette. Light mode uses a near-white background with lavender-purple tones, cerulean blue salient, and vivid pink popout. Dark mode inverts the accent roles — hot pink salient and electric teal-cyan popout against a deep purple-black background. |
+| `jinx` | Arcane-inspired palette. Both modes share the same role mapping: magenta-pink salient (Jinx's hair), Hextech neon-blue strong, and electric teal-cyan popout. Light mode uses a near-white background with a barely perceptible lavender tint; dark mode uses a near-black background with a subtle violet tint. |
 | `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
 | `rougier` | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications. |
