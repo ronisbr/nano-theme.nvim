@@ -5,7 +5,7 @@
 --
 -- -----------------------------------------------------------------------------------------
 
-local build_colors = require("nano-theme.colors").build_colors
+local build_colors = require("nano-theme.colors.utils").build_colors
 
 local M = {}
 
