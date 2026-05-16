@@ -1,7 +1,9 @@
--- Rougier's Variant -----------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
 --
--- The original variant of the NANO theme.
+-- Rougier's theme variant — the original variant of the NANO Emacs theme, closest to
+-- the original N Λ N O design.
 --
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

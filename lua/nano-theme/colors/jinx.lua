@@ -1,11 +1,12 @@
--- Jinx Variant ---------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
 --
--- Inspired by Jinx from Arcane — near-white background with a barely perceptible
--- lavender tint, magenta-pink salient (her hair), Hextech neon-blue strong, and a
--- distinct teal-cyan popout, giving three perceptually distinct accents.
--- In dark mode: near-black background with a barely perceptible violet tint, hot pink
--- salient (her hair), Hextech neon-blue strong, and electric teal-cyan popout.
+-- Jinx theme variant inspired by Jinx from Arcane — magenta-pink salient (her hair)
+-- paired with Hextech neon-blue strong, and a distinct teal-cyan popout. Light mode
+-- features a near-white background with barely perceptible lavender tint. Dark mode
+-- features a near-black background with barely perceptible violet tint and electric
+-- bright colors.
 --
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

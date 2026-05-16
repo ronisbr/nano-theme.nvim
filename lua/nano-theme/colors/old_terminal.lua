@@ -1,4 +1,8 @@
--- Old Terminal ---------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Old Terminal theme variant with retro phosphor monitor palette.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

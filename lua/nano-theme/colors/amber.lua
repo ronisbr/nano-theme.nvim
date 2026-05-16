@@ -1,9 +1,10 @@
--- Amber Variant ---------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
 --
--- Inspired by the "positive image" of an amber phosphor CRT monitor — warm parchment
--- background with deep amber ink, and the classic amber phosphor CRT monitor with very
--- dark background and warm golden-amber glowing text.
+-- Amber theme variant inspired by phosphor CRT monitors — warm parchment background
+-- with deep amber ink in light mode, and very dark background with warm golden-amber
+-- glowing text in dark mode.
 --
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

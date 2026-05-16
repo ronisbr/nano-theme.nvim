@@ -1,4 +1,8 @@
--- Gray Variant ---------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Gray theme variant with fully desaturated, neutral gray palette.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

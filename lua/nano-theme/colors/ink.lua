@@ -1,4 +1,8 @@
--- Ink Variant -----------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Ink theme variant with high-contrast near-pure black and white backgrounds.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

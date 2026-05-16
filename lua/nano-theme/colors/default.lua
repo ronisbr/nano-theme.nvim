@@ -1,4 +1,9 @@
--- Default Variant -------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Default theme variant with warm, slightly tinted palette faithful to the original
+-- N Λ N O Emacs theme.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

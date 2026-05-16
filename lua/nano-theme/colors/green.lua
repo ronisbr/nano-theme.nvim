@@ -1,4 +1,8 @@
--- Green Variant ---------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Green theme variant with nature-inspired palette with green-tinted backgrounds.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 

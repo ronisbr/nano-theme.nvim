@@ -1,4 +1,8 @@
--- Orange Variant --------------------------------------------------------------------------
+-- Description -----------------------------------------------------------------------------
+--
+-- Orange theme variant with warm, earthy palette with orange-tinted backgrounds.
+--
+-- -----------------------------------------------------------------------------------------
 
 local build_colors = require("nano-theme.colors").build_colors
 
