@@ -80,7 +80,7 @@ function M.dark()
 
     nano_foreground_color = "#80C080",
     nano_background_color = "#060E06",
-    nano_highlight_color  = "#0C180C",
+    nano_highlight_color  = "#0E200E",
     nano_subtle_color     = "#122012",
     nano_veryfaded_color  = "#183018",
     nano_faded_color      = "#508050",

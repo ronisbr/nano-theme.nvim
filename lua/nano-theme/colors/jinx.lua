@@ -40,7 +40,7 @@ function M.light()
     nano_veryfaded_color  = "#CBC4C3",
     nano_faded_color      = "#6E687C",
     nano_salient_color    = "#A8228A",
-    nano_strong_color     = "#0E70D8",
+    nano_strong_color     = "#0B54A8",
     nano_popout_color     = "#0E7488",
     nano_critical_color   = "#B82530",
 
@@ -84,7 +84,7 @@ function M.dark()
 
     nano_foreground_color = "#C8C0DC",
     nano_background_color = "#0C0A1A",
-    nano_highlight_color  = "#161222",
+    nano_highlight_color  = "#1C1830",
     nano_subtle_color     = "#2A2640",
     nano_veryfaded_color  = "#2E2848",
     nano_faded_color      = "#867EA8",

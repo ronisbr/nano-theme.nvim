@@ -31,7 +31,7 @@ function M.light()
 
     nano_foreground_color = "#1C1C1C",
     nano_background_color = "#F6F6F4",
-    nano_highlight_color  = "#EEEEEC",
+    nano_highlight_color  = "#E9E9E7",
     nano_subtle_color     = "#E2E2E0",
     nano_veryfaded_color  = "#C4C4C4",
     nano_faded_color      = "#727272",
