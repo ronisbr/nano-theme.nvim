@@ -76,9 +76,10 @@ vim.cmd.colorscheme("nano-theme")
 | `amber` | Amber phosphor CRT monitor palette. Dark mode uses a near-black background with warm golden-amber glowing text; light mode uses a warm parchment background with deep amber ink. |
 | `blue` | Cool, steel-blue tinted palette where backgrounds and accents lean toward blue tones. |
 | `default` | Warm, slightly tinted palette faithful to the original N Λ N O Emacs theme. |
+| `gilded` | Ink, paper, and gold palette — a sibling of `ink` with a softer, warmer character. Dark mode uses a blue-tinted ink background with warm paper text, a gilded gold salient, and a muted teal popout; light mode uses a warm paper background with dark ink text. Choose `ink` for maximum neutral contrast, `gilded` for the tinted, paper-like rendition of the same gold/cool-accent scheme. |
 | `gray` | Fully desaturated, neutral gray palette. Salient and popout faces use achromatic tones for a monochrome feel. |
 | `green` | Nature-inspired palette with green-tinted backgrounds. |
-| `ink` | High-contrast variant with near-pure black/white backgrounds and warm amber/blue accent hues. |
+| `ink` | High-contrast variant with near-pure black/white neutral backgrounds and warm amber/blue accent hues. The crisper, fully neutral sibling of `gilded`. |
 | `jinx` | Arcane-inspired palette. Both modes share the same role mapping: magenta-pink salient (Jinx's hair), Hextech neon-blue strong, and electric teal-cyan popout. Light mode uses a near-white background with a barely perceptible grey-pink tint; dark mode uses a near-black background with a subtle violet tint. |
 | `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
