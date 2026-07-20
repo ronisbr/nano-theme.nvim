@@ -62,12 +62,17 @@ the `setup` function:
 MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
 vim.o.background = "light" -- or "dark".
 require("nano-theme").setup({
-  light_variant = "default",
-  dark_variant  = "default",
-  transparent   = false,
+  light_variant       = "default",
+  dark_variant        = "default",
+  transparent         = false,
+  transparent_floats  = true,
+  float_blend         = 0,
 })
 vim.cmd.colorscheme("nano-theme")
 ```
+
+These are the defaults; `transparent_floats = true` and `float_blend = 0`
+preserve the previous float appearance. `setup` validates both new values.
 
 ### Variants
 
@@ -110,6 +115,23 @@ The selector lists the canonical variants and keeps the light and dark selection
 Set `transparent = true` in `setup` to clear background-bearing editor and integration
 surfaces while retaining contrast for selections, searches, diagnostics, and diffs. The
 setting applies only when nano-theme is loaded and persists across nano-theme reloads.
+
+When general transparency is enabled, `transparent_floats = true` makes
+`NormalFloat`, `FloatBorder`, and `FloatTitle` fully transparent. Set it to `false` to
+retain Nano's native float background. For a recommended dark tinted float setup, use:
+
+```lua
+require("nano-theme").setup({
+  transparent = true,
+  transparent_floats = false,
+  float_blend = 10,
+})
+```
+
+`float_blend` is an integer from 0 through 100 applied to Nano float highlight groups
+when their background is retained: 0 is opaque and 100 is maximally blended. It does
+not mutate Neovim's `winblend` option. Plugins with custom, non-linked float highlights
+may not inherit it.
 
 Use `:NanoThemeTransparent` to toggle it, or `:NanoThemeTransparentEnable` and
 `:NanoThemeTransparentDisable` to set it explicitly. The equivalent Lua APIs are:

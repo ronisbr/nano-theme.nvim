@@ -24,7 +24,9 @@ local function snapshot(theme)
     background    = vim.o.background,
     light_variant = theme.options.light_variant,
     dark_variant  = theme.options.dark_variant,
-    transparent   = theme.options.transparent,
+    transparent        = theme.options.transparent,
+    transparent_floats = theme.options.transparent_floats,
+    float_blend        = theme.options.float_blend,
   }
 end
 
@@ -34,6 +36,8 @@ local function restore(theme, state)
   theme.options.light_variant = previous.light_variant
   theme.options.dark_variant = previous.dark_variant
   theme.options.transparent = previous.transparent
+  theme.options.transparent_floats = previous.transparent_floats
+  theme.options.float_blend = previous.float_blend
 
   if previous.colors_name == "nano-theme" then
     set_background(previous.background)

@@ -7,9 +7,13 @@
 local M = {}
 
 --- Return the highlight group table for editor UI elements.
+---@param options table Theme options.
 ---@return table # Map of highlight group names to their attribute tables.
-function M.get()
+function M.get(options)
   local c = require("nano-theme.colors").get()
+  local transparent_float = options.transparent and options.transparent_floats
+  local float_bg = transparent_float and "NONE" or c.bg
+  local float_blend = transparent_float and 0 or options.float_blend
 
   return {
     ColorColumn   = { bg = c.nano_highlight_color },
@@ -23,8 +27,8 @@ function M.get()
     Directory     = { fg = c.fg },
     EndOfBuffer   = {},
     ErrorMsg      = c.nano_critical,
-    FloatBorder   = c.nano_faded,
-    FloatTitle    = c.nano_strong,
+    FloatBorder   = { fg = c.nano_faded_color, bg = float_bg, blend = float_blend },
+    FloatTitle    = { fg = c.nano_strong_color, bg = float_bg, blend = float_blend, bold = true },
     FoldColumn    = { bg = c.bg },
     Folded        = { fg = c.nano_salient_color, bold = true },
     IncSearch     = { fg = c.nano_popout_color, bg = c.nano_subtle_color },
@@ -36,7 +40,7 @@ function M.get()
     MsgSeparator  = {},
     NonText       = { fg = c.nano_veryfaded_color, italic = true },
     Normal        = { fg = c.fg, bg = c.bg },
-    NormalFloat   = { link = "Normal" },
+    NormalFloat   = { fg = c.fg, bg = float_bg, blend = float_blend },
     NormalNC      = { link = "Normal" },
     NormalSB      = { link = "Normal" },
     Pmenu         = { fg = c.fg, bg = c.bg_alt },

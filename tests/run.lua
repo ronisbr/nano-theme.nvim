@@ -19,13 +19,23 @@ local function assert_link(name, target)
   assert_true(hl.link == target, string.format("%s should link to %s, got %s", name, target, vim.inspect(hl)))
 end
 
+local function assert_float_surface(background, blend, message)
+  for _, name in ipairs({ "NormalFloat", "FloatBorder", "FloatTitle" }) do
+    local hl = highlight(name)
+    assert_true(hl.bg == background, message .. " (" .. name .. " background): " .. vim.inspect(hl))
+    assert_true((hl.blend or 0) == blend, message .. " (" .. name .. " blend): " .. vim.inspect(hl))
+  end
+end
+
 local function theme_state(theme)
   return {
     colors_name   = vim.g.colors_name,
     background    = vim.o.background,
     light_variant = theme.options.light_variant,
     dark_variant  = theme.options.dark_variant,
-    transparent   = theme.options.transparent,
+    transparent        = theme.options.transparent,
+    transparent_floats = theme.options.transparent_floats,
+    float_blend        = theme.options.float_blend,
   }
 end
 
@@ -37,6 +47,9 @@ end
 local ok, failure = xpcall(function()
   local theme = require("nano-theme")
   local variants = require("nano-theme.variants").names
+
+  assert_true(theme.options.transparent_floats == true, "transparent_floats default is not true")
+  assert_true(theme.options.float_blend == 0, "float_blend default is not zero")
 
   for _, mode in ipairs({ "light", "dark" }) do
     vim.o.background = mode
@@ -57,6 +70,25 @@ local ok, failure = xpcall(function()
   valid, message = pcall(theme.setup, { dark_variant = "not-a-variant" })
   assert_true(not valid and message:match("invalid dark_variant"), "invalid dark variant error was not useful")
 
+  theme.setup({ transparent_floats = false, float_blend = 100 })
+  assert_true(not theme.options.transparent_floats, "valid transparent_floats was not accepted")
+  assert_true(theme.options.float_blend == 100, "valid float_blend was not accepted")
+  local valid_float_options = vim.deepcopy(theme.options)
+  for _, invalid in ipairs({
+    { transparent_floats = 1, error = "transparent_floats" },
+    { float_blend = -1, error = "float_blend" },
+    { float_blend = 101, error = "float_blend" },
+    { float_blend = 1.5, error = "float_blend" },
+    { float_blend = "20", error = "float_blend" },
+  }) do
+    local expected = invalid.error
+    invalid.error = nil
+    valid, message = pcall(theme.setup, invalid)
+    assert_true(not valid and message:match(expected), "invalid " .. expected .. " was accepted")
+    assert_true(vim.deep_equal(theme.options, valid_float_options), "failed setup mutated existing options")
+  end
+  theme.setup({ transparent_floats = true, float_blend = 0 })
+
   theme.setup({ test_nested = { first = true } })
   theme.setup({ test_nested = { second = true } })
   assert_true(
@@ -64,7 +96,13 @@ local ok, failure = xpcall(function()
     "setup no longer deep-merges valid options"
   )
 
-  theme.setup({ light_variant = "default", dark_variant = "default", transparent = false })
+  theme.setup({
+    light_variant = "default",
+    dark_variant = "default",
+    transparent = false,
+    transparent_floats = true,
+    float_blend = 0,
+  })
   vim.o.background = "light"
   theme.load()
   assert_link("@text.diff.add", "DiffAdd")
@@ -80,6 +118,9 @@ local ok, failure = xpcall(function()
   assert_true(commands.NanoThemeLight ~= nil, "light selector command is missing")
   assert_true(commands.NanoThemeDark ~= nil, "dark selector command is missing")
 
+  assert_true(highlight("NormalFloat", true).link == nil, "NormalFloat still links to Normal")
+  assert_float_surface(highlight("Normal").bg, 0, "native float surface is inconsistent")
+  theme.setup({ transparent_floats = true, float_blend = 73 })
   vim.cmd.NanoThemeTransparentEnable()
   assert_true(theme.options.transparent, "enable command did not update state")
   assert_true(highlight("Normal").bg == nil, "Normal is not transparent")
@@ -88,16 +129,41 @@ local ok, failure = xpcall(function()
   assert_true(highlight("NeoTreeNormal").bg == nil, "integration container is not transparent")
   assert_true(highlight("Visual").bg ~= nil, "Visual contrast background was cleared")
   assert_true(highlight("DiffAdd").bg ~= nil, "diff contrast background was cleared")
+  assert_float_surface(nil, 0, "fully transparent floats were faded")
+  assert_link("TelescopeBorder", "FloatBorder")
+  assert_true(highlight("TelescopeBorder").bg == nil, "linked float border is not transparent")
   theme.load()
   assert_true(highlight("Normal").bg == nil, "transparency did not survive reload")
+  assert_float_surface(nil, 0, "float transparency did not survive reload")
+
+  theme.setup({ transparent_floats = false, float_blend = 37 })
+  theme.load()
+  local float_background = highlight("NormalFloat").bg
+  assert_true(highlight("Normal").bg == nil, "general transparency was lost")
+  assert_true(float_background ~= nil, "native float background was not retained")
+  assert_float_surface(float_background, 37, "retained float surface is inconsistent")
+  assert_true(highlight("TelescopeBorder").bg == float_background, "linked float border lost its background")
+  assert_true(highlight("TelescopeBorder").blend == 37, "linked float border did not inherit blend")
+  assert_true(highlight("NoiceCmdlinePopupTitle").bg == float_background, "linked float title lost its background")
+  theme.load()
+  assert_float_surface(float_background, 37, "retained float settings did not survive reload")
 
   vim.cmd.NanoThemeTransparentDisable()
   assert_true(not theme.options.transparent, "disable command did not update state")
   assert_true(highlight("Normal").bg ~= nil, "Normal background was not restored")
+  assert_float_surface(float_background, 37, "disabling transparency changed float settings")
   vim.cmd.NanoThemeTransparent()
   assert_true(theme.options.transparent, "toggle command did not enable transparency")
+  assert_float_surface(float_background, 37, "toggle did not retain native float settings")
   vim.cmd.NanoThemeTransparent()
   assert_true(not theme.options.transparent, "toggle command did not disable transparency")
+
+  theme.setup({ transparent_floats = true, float_blend = 100 })
+  theme.load()
+  assert_float_surface(highlight("NormalFloat").bg, 100, "maximum float blend was not applied")
+  theme.setup({ transparent_floats = true, float_blend = 0 })
+  theme.load()
+  assert_float_surface(highlight("NormalFloat").bg, 0, "opaque float blend was not restored")
 
   vim.g.colors_name = "external-test"
   vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#123456" })
@@ -178,12 +244,20 @@ local ok, failure = xpcall(function()
   assert_true(notifications == 1, "acceptance without preview did not emit exactly one notification")
 
   -- Repeated previews remain temporary, and cancellation restores a nano-theme snapshot.
-  theme.setup({ light_variant = "amber", dark_variant = "ink", transparent = true })
+  theme.setup({
+    light_variant = "amber",
+    dark_variant = "ink",
+    transparent = true,
+    transparent_floats = false,
+    float_blend = 64,
+  })
   vim.o.background = "dark"
   theme.load()
   local nano_snapshot = theme_state(theme)
   notifications = 0
   theme.select_light_variant()
+  theme.options.transparent_floats = true
+  theme.options.float_blend = 7
   selection.opts.preview_item("blue", 2)
   selection.opts.preview_item("gilded", 4)
   selection.callback(nil, nil)

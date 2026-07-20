@@ -37,9 +37,11 @@ With MiniDeps, configuration and activation can be written as follows:
     MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
     vim.o.background = "light" -- or "dark".
     require("nano-theme").setup({
-      light_variant = "default",
-      dark_variant  = "default",
-      transparent   = false,
+      light_variant      = "default",
+      dark_variant       = "default",
+      transparent        = false,
+      transparent_floats = true,
+      float_blend        = 0,
     })
     vim.cmd.colorscheme("nano-theme")
 <
@@ -53,21 +55,41 @@ Configure the theme before activating it:
     require("nano-theme").setup(options)
 <
 `options` is a table or nil.  Setup deep-merges supplied values into the
-current options.  It rejects unknown light and dark variant names.
+current options.  It rejects unknown light and dark variant names.  It also
+validates `transparent_floats` and `float_blend`.
 
 OPTIONS                                                   *nano-theme-options*
 
 The defaults are:
 >
     {
-      light_variant = "default",
-      dark_variant  = "default",
-      transparent   = false,
+      light_variant      = "default",
+      dark_variant       = "default",
+      transparent        = false,
+      transparent_floats = true,
+      float_blend        = 0,
     }
 <
 `light_variant` and `dark_variant` select palettes for their respective
 background modes.  See |nano-theme-variants|.  `transparent` controls the
 background behavior described in |nano-theme-transparent|.
+
+                                               *nano-theme-transparent-floats*
+`transparent_floats` (`boolean`, default `true`) ~
+    When general transparency is enabled, true makes `NormalFloat`,
+    `FloatBorder`, and `FloatTitle` fully transparent.  False retains Nano's
+    native float background.
+
+                                                      *nano-theme-float-blend*
+`float_blend` (`integer`, default `0`) ~
+    An integer from 0 through 100 applied to Nano float highlight groups when
+    their background is retained.  Zero is opaque and 100 is maximally
+    blended.  This does not mutate Neovim's `winblend` option.  Plugins with
+    custom, non-linked float highlights may not inherit it.
+
+The float defaults are backward compatible.  Setup validates that
+`transparent_floats` is a boolean and `float_blend` is an integer from 0
+through 100.
 
 ==============================================================================
 VARIANTS                                                 *nano-theme-variants*
@@ -155,6 +177,17 @@ Set `transparent = true` in |nano-theme-setup| to clear background-bearing
 editor and integration surfaces while retaining contrast for selections,
 searches, diagnostics, diffs, and statusline mode badges.  The setting applies
 when nano-theme is loaded and persists across nano-theme reloads.
+
+By default, floats are also fully transparent.  To retain Nano's native float
+background and apply a recommended dark tint, use:
+>
+    require("nano-theme").setup({
+      transparent = true,
+      transparent_floats = false,
+      float_blend = 10,
+    })
+<
+See |nano-theme-transparent-floats| and |nano-theme-float-blend| for details.
 
 The commands are:
 

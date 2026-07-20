@@ -29,9 +29,11 @@
 local M = {}
 
 M.options = {
-  light_variant = "default",
-  dark_variant  = "default",
-  transparent   = false,
+  light_variant      = "default",
+  dark_variant       = "default",
+  transparent        = false,
+  transparent_floats = true,
+  float_blend        = 0,
 }
 
 --- Set up the theme with the provided options, merging them into the defaults.
@@ -52,18 +54,26 @@ function M.setup(options)
     end
   end
 
+  if type(merged.transparent_floats) ~= "boolean" then
+    error("nano-theme: transparent_floats must be a boolean")
+  end
+
+  if type(merged.float_blend) ~= "number"
+      or merged.float_blend % 1 ~= 0
+      or merged.float_blend < 0
+      or merged.float_blend > 100 then
+    error("nano-theme: float_blend must be an integer from 0 through 100")
+  end
+
   M.options = merged
 end
 
 local transparent_groups = {
   -- Editor surfaces -----------------------------------------------------------------------
   ColorColumn = true,
-  FloatBorder = true,
-  FloatTitle = true,
   FoldColumn = true,
   Folded = true,
   Normal = true,
-  NormalFloat = true,
   NormalNC = true,
   NormalSB = true,
   Pmenu = true,
@@ -167,7 +177,7 @@ function M.apply(options)
   vim.o.termguicolors = true
 
   -- Load the default groups.
-  local g_editor = require("nano-theme.groups.editor").get()
+  local g_editor = require("nano-theme.groups.editor").get(M.options)
   local g_syntax = require("nano-theme.groups.syntax").get()
 
   set_groups(g_editor)
