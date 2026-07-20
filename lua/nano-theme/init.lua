@@ -186,7 +186,7 @@ function M.apply(options)
   -- Integrations --------------------------------------------------------------------------
 
   for _, i in ipairs(integrations) do
-    local g = require("nano-theme.groups.integrations." .. i).get()
+    local g = require("nano-theme.groups.integrations." .. i).get(M.options)
     set_groups(g)
   end
 

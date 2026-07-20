@@ -7,9 +7,13 @@
 local M = {}
 
 --- Return the highlight group table for mini.nvim integration.
+---@param options table Theme options.
 ---@return table # Map of mini.nvim highlight group names to their attribute tables.
-function M.get()
+function M.get(options)
   local c = require("nano-theme.colors").get()
+  local transparent_float = options.transparent and options.transparent_floats
+  local float_bg = transparent_float and "NONE" or c.bg
+  local float_blend = transparent_float and 0 or options.float_blend
 
   return {
     -- mini.clue ---------------------------------------------------------------------------
@@ -43,7 +47,9 @@ function M.get()
     MiniPickNormal        = { link = "NormalFloat" },
     MiniPickPreviewLine   = { bg = c.nano_subtle_color },
     MiniPickPreviewRegion = { bg = c.nano_subtle_color },
-    MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
+    MiniPickPrompt        = { fg = c.nano_popout_color, bg = float_bg, blend = float_blend, bold = true },
+    MiniPickPromptCaret   = { link = "MiniPickPrompt" },
+    MiniPickPromptPrefix  = { link = "MiniPickPrompt" },
 
     -- mini.starter ------------------------------------------------------------------------
 
