@@ -135,6 +135,7 @@ local integrations = {
   "notify",
   "nvim-lsp",
   "telescope",
+  "tiny-cmdline",
   "treesitter",
 }
 

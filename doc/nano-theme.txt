@@ -247,7 +247,7 @@ nano-theme defines highlight groups for these integrations:
     fzf-lua           indent-blankline  mini
     neogit            neotree           noice
     notify            nvim-lsp          telescope
-    treesitter
+    tiny-cmdline      treesitter
 
 These highlights do not install or configure the corresponding plugins.
 

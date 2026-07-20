@@ -27,6 +27,14 @@ local function assert_float_surface(background, blend, message)
   end
 end
 
+local function assert_tiny_cmdline_surface(background, blend, message)
+  for _, name in ipairs({ "TinyCmdlineNormal", "TinyCmdlineBorder", "TinyCmdlineTitle" }) do
+    local hl = highlight(name)
+    assert_true(hl.bg == background, message .. " (" .. name .. " background): " .. vim.inspect(hl))
+    assert_true((hl.blend or 0) == blend, message .. " (" .. name .. " blend): " .. vim.inspect(hl))
+  end
+end
+
 local function theme_state(theme)
   return {
     colors_name   = vim.g.colors_name,
@@ -140,11 +148,16 @@ local ok, failure = xpcall(function()
     assert_true((highlight(name).blend or 0) == 0, name .. " foreground cells were faded")
   end
   assert_true(highlight("MiniPickPrompt").bold == true, "MiniPickPrompt is not bold")
+  assert_link("TinyCmdlineNormal", "NormalFloat")
+  assert_link("TinyCmdlineBorder", "FloatBorder")
+  assert_link("TinyCmdlineTitle", "FloatTitle")
+  assert_tiny_cmdline_surface(nil, 0, "tiny-cmdline floats are not fully transparent")
   assert_link("TelescopeBorder", "FloatBorder")
   assert_true(highlight("TelescopeBorder").bg == nil, "linked float border is not transparent")
   theme.load()
   assert_true(highlight("Normal").bg == nil, "transparency did not survive reload")
   assert_float_surface(nil, 0, "float transparency did not survive reload")
+  assert_tiny_cmdline_surface(nil, 0, "tiny-cmdline transparency did not survive reload")
 
   theme.setup({ transparent_floats = false, float_blend = 37 })
   theme.load()
@@ -161,8 +174,10 @@ local ok, failure = xpcall(function()
     assert_true(highlight(name).bg == float_background, name .. " lost its float background")
     assert_true(highlight(name).blend == 37, name .. " did not inherit float blend")
   end
+  assert_tiny_cmdline_surface(float_background, 37, "tiny-cmdline did not inherit retained float settings")
   theme.load()
   assert_float_surface(float_background, 37, "retained float settings did not survive reload")
+  assert_tiny_cmdline_surface(float_background, 37, "tiny-cmdline retained settings did not survive reload")
 
   vim.cmd.NanoThemeTransparentDisable()
   assert_true(not theme.options.transparent, "disable command did not update state")
