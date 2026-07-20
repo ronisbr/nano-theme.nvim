@@ -2,8 +2,8 @@
 
 <p align="center"><img src="screenshots/nano-theme-nvim.png" alt="nano-theme.nvim"></p>
 
-This package contains my attempt to replicate in Neovim the incredible work of @rougier in
-[N Λ N O Theme](https://github.com/rougier/nano-theme) for Emacs.
+This package adapts @rougier's excellent
+[N Λ N O Theme](https://github.com/rougier/nano-theme) for Emacs to Neovim.
 
 N Λ N O Theme is a minimalist color scheme based on six colors only:
 
@@ -22,27 +22,26 @@ N Λ N O Theme is a minimalist color scheme based on six colors only:
 > (e.g., light/regular or regular/bold). It is generally used for titles, keywords,
 > directory, etc.
 
-- **Salient face** is used for information that are important.
+- **Salient face** is used for information that is important.
 
 > To suggest the information is of the same nature but important, the face uses a different
 > hue with approximately the same intensity as the default face. This is typically used for
 > links.
 
-- **Faded face** is for information that are less important.
+- **Faded face** is for information that is less important.
 
 > It is made by using a hue similar to the default face but with a lesser intensity than the
 > default. It can be used for comments, secondary information and also replace italic (which
-> is generally abused anyway
+> is generally abused anyway).
 
 - **Subtle face** is used to suggest a physical area on the screen.
 
 > It is important to not disturb too strongly the reading of information and this can be
 > made by setting a very light background color that is barely perceptible.
 
-This version of the N Λ N O theme is slightly modified compared to the Emacs version. We
-decided to make the background warmer in the light theme and remove the blue tint in the
-dark version. All colors were slightly tuned to meet the minimum contrast requirements for
-accessibility.
+This Neovim version is slightly modified compared to the Emacs version. Its light background
+is warmer, its dark background omits the blue tint, and its colors are tuned to meet minimum
+accessibility contrast requirements.
 
 ## Installation
 
