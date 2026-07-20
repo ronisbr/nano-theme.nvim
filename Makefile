@@ -12,7 +12,7 @@
 
 # == Configuration =========================================================================
 
-.PHONY: help test
+.PHONY: help helptags test
 
 .DEFAULT_GOAL := test
 
@@ -34,6 +34,12 @@ help:
 		$(MAKEFILE_LIST)
 
 # == Targets ===============================================================================
+
+##@ Documentation
+
+## Regenerate Neovim help tags
+helptags:
+	nvim --headless -u NONE -c "helptags doc" -c "qall!"
 
 ##@ Testing
 
