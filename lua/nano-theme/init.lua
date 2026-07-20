@@ -31,56 +31,134 @@ local M = {}
 M.options = {
   light_variant = "default",
   dark_variant  = "default",
+  transparent   = false,
 }
 
 --- Set up the theme with the provided options, merging them into the defaults.
 ---@param options table|nil Table with configuration options to override the defaults.
 function M.setup(options)
-  M.options = vim.tbl_deep_extend("force", M.options, options or {})
+  local merged = vim.tbl_deep_extend("force", M.options, options or {})
+  local variants = require("nano-theme.variants")
+
+  for _, mode in ipairs({ "light", "dark" }) do
+    local key = mode .. "_variant"
+    if not variants.has(merged[key]) then
+      error(string.format(
+        "nano-theme: invalid %s %q (available variants: %s)",
+        key,
+        tostring(merged[key]),
+        table.concat(variants.names, ", ")
+      ))
+    end
+  end
+
+  M.options = merged
 end
 
-local light_variant_list = {
-  "amber",
-  "blue",
-  "default",
-  "gilded",
-  "gray",
-  "green",
-  "ink",
-  "jinx",
-  "old_terminal",
-  "orange",
-  "rougier"
+local transparent_groups = {
+  -- Editor surfaces -----------------------------------------------------------------------
+  ColorColumn = true,
+  FloatBorder = true,
+  FloatTitle = true,
+  FoldColumn = true,
+  Folded = true,
+  Normal = true,
+  NormalFloat = true,
+  NormalNC = true,
+  NormalSB = true,
+  Pmenu = true,
+  PmenuSbar = true,
+  PmenuThumb = true,
+  SignColumn = true,
+  SignColumnSB = true,
+  StatusLine = true,
+  StatusLineNC = true,
+  TabLine = true,
+  TabLineFill = true,
+  VertSplit = true,
+  WinSeparator = true,
+
+  -- Integration containers ---------------------------------------------------------------
+  MiniClueDescGroup = true,
+  MiniClueNextKeyWithPostkeys = true,
+  MiniStatuslineDevinfo = true,
+  MiniStatuslineFileinfo = true,
+  MiniStatuslineFilename = true,
+  MiniStatuslineInactive = true,
+  MiniStatuslineModeCommand = true,
+  MiniStatuslineModeInsert = true,
+  MiniStatuslineModeNormal = true,
+  MiniStatuslineModeOther = true,
+  MiniStatuslineModeReplace = true,
+  MiniStatuslineModeVisual = true,
+  MiniTablineFill = true,
+  MiniTablineHidden = true,
+  MiniTablineModifiedHidden = true,
+  MiniTablineModifiedVisible = true,
+  MiniTablineTabpagesection = true,
+  MiniTablineVisible = true,
+  NeoTreeNormal = true,
+  NeoTreeNormalNC = true,
+  NeoTreeStatusLine = true,
+  NeoTreeTitleBar = true,
+  TelescopeBorder = true,
+  TelescopeNormal = true,
+  background = true,
+  buffer_visible = true,
+  close_button = true,
+  close_button_visible = true,
+  fill = true,
+  modified = true,
+  modified_visible = true,
+  offset_separator = true,
+  separator = true,
+  separator_visible = true,
+  tab = true,
+  tab_close = true,
+  tab_separator = true,
 }
 
-local dark_variant_list  = {
-  "amber",
-  "blue",
-  "default",
-  "gilded",
-  "gray",
-  "green",
-  "ink",
-  "jinx",
-  "old_terminal",
-  "orange",
-  "rougier"
+local integrations = {
+  "bufferline",
+  "copilot",
+  "dashboard",
+  "fzf-lua",
+  "indent-blankline",
+  "mini",
+  "neogit",
+  "neotree",
+  "noice",
+  "notify",
+  "nvim-lsp",
+  "telescope",
+  "treesitter",
 }
+
+local function set_groups(groups)
+  for name, val in pairs(groups) do
+    if M.options.transparent and transparent_groups[name] and not val.link then
+      val = vim.tbl_extend("force", val, { bg = "NONE" })
+    end
+    vim.api.nvim_set_hl(0, name, val)
+  end
+end
+
+local function notify_colorscheme()
+  vim.api.nvim_exec_autocmds("ColorScheme", {
+    pattern = "nano-theme",
+    modeline = false,
+  })
+end
 
 --- Open an interactive selector to choose the light theme variant and reload the theme.
 function M.select_light_variant()
   vim.ui.select(
-    light_variant_list,
-    {
-      prompt = "Select light theme variant:",
-    },
+    require("nano-theme.variants").names,
+    { prompt = "Select light theme variant:" },
     function(choice)
       if choice then
         M.options.light_variant = choice
-        M.load()
-
-        -- Notify plugins that the colorscheme has changed.
-        vim.api.nvim_exec_autocmds("ColorScheme", { modeline = false })
+        M.apply({ notify = true })
       end
     end
   )
@@ -89,24 +167,22 @@ end
 --- Open an interactive selector to choose the dark theme variant and reload the theme.
 function M.select_dark_variant()
   vim.ui.select(
-    dark_variant_list,
-    {
-      prompt = "Select dark theme variant:",
-    },
+    require("nano-theme.variants").names,
+    { prompt = "Select dark theme variant:" },
     function(choice)
       if choice then
         M.options.dark_variant = choice
-        M.load()
-
-        -- Notify plugins that the colorscheme has changed.
-        vim.api.nvim_exec_autocmds("ColorScheme", { modeline = false })
+        M.apply({ notify = true })
       end
     end
   )
 end
 
---- Load and apply the theme, setting all highlight groups and terminal colors.
-function M.load()
+--- Apply the theme and optionally notify ColorScheme listeners.
+---@param options table|nil Application options. Set `notify` to true for manual reloads.
+function M.apply(options)
+  options = options or {}
+
   -- Clear all the current highlights.
   vim.cmd([[hi clear]])
 
@@ -118,58 +194,55 @@ function M.load()
   local g_editor = require("nano-theme.groups.editor").get()
   local g_syntax = require("nano-theme.groups.syntax").get()
 
-  for name, val in pairs(g_editor) do
-    vim.api.nvim_set_hl(0, name, val)
-  end
-
-  for name, val in pairs(g_syntax) do
-    vim.api.nvim_set_hl(0, name, val)
-  end
+  set_groups(g_editor)
+  set_groups(g_syntax)
 
   -- Integrations --------------------------------------------------------------------------
 
-  -- List of available integrations.
-  local integrations = {
-    "copilot",
-    "dashboard",
-    "fzf-lua",
-    "indent-blankline",
-    "mini",
-    "neogit",
-    "neotree",
-    "noice",
-    "notify",
-    "nvim-lsp",
-    "telescope",
-    "treesitter",
-  }
-
   for _, i in ipairs(integrations) do
     local g = require("nano-theme.groups.integrations." .. i).get()
-
-    for name, val in pairs(g) do
-      vim.api.nvim_set_hl(0, name, val)
-    end
+    set_groups(g)
   end
 
   -- Set the terminal colors.
   local c = require("nano-theme.colors").get()
-  vim.g.terminal_color_0  = c.terminal_color_0
-  vim.g.terminal_color_1  = c.terminal_color_1
-  vim.g.terminal_color_2  = c.terminal_color_2
-  vim.g.terminal_color_3  = c.terminal_color_3
-  vim.g.terminal_color_4  = c.terminal_color_4
-  vim.g.terminal_color_5  = c.terminal_color_5
-  vim.g.terminal_color_6  = c.terminal_color_6
-  vim.g.terminal_color_7  = c.terminal_color_7
-  vim.g.terminal_color_8  = c.terminal_color_8
-  vim.g.terminal_color_9  = c.terminal_color_9
-  vim.g.terminal_color_10 = c.terminal_color_10
-  vim.g.terminal_color_11 = c.terminal_color_11
-  vim.g.terminal_color_12 = c.terminal_color_12
-  vim.g.terminal_color_13 = c.terminal_color_13
-  vim.g.terminal_color_14 = c.terminal_color_14
-  vim.g.terminal_color_15 = c.terminal_color_15
+  for i = 0, 15 do
+    vim.g["terminal_color_" .. i] = c["terminal_color_" .. i]
+  end
+
+  if options.notify then
+    notify_colorscheme()
+  end
 end
+
+--- Load the theme without manually emitting ColorScheme.
+--- The `:colorscheme` command emits that event after this function returns.
+function M.load()
+  M.apply({ notify = false })
+end
+
+--- Explicitly enable or disable transparent backgrounds.
+---@param enabled boolean Whether transparent backgrounds should be enabled.
+function M.set_transparent(enabled)
+  M.options.transparent = not not enabled
+  if vim.g.colors_name == "nano-theme" then
+    M.apply({ notify = true })
+  end
+end
+
+--- Toggle transparent backgrounds.
+---@return boolean # The newly enabled transparency state.
+function M.toggle_transparent()
+  M.set_transparent(not M.options.transparent)
+  return M.options.transparent
+end
+
+vim.api.nvim_create_user_command("NanoThemeTransparent", M.toggle_transparent, { force = true })
+vim.api.nvim_create_user_command("NanoThemeTransparentEnable", function()
+  M.set_transparent(true)
+end, { force = true })
+vim.api.nvim_create_user_command("NanoThemeTransparentDisable", function()
+  M.set_transparent(false)
+end, { force = true })
 
 return M
