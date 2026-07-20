@@ -40,7 +40,7 @@ function M.get()
     MiniPickMatchCurrent  = { bg = c.nano_subtle_color },
     MiniPickMatchMarked   = { fg = c.nano_salient_color, bold = true },
     MiniPickMatchRanges   = { fg = c.nano_salient_color, bold = true },
-    MiniPickNormal        = { link = "Normal" },
+    MiniPickNormal        = { link = "NormalFloat" },
     MiniPickPreviewLine   = { bg = c.nano_subtle_color },
     MiniPickPreviewRegion = { bg = c.nano_subtle_color },
     MiniPickPrompt        = { fg = c.nano_popout_color, bold  = true },
