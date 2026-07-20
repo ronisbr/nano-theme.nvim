@@ -11,7 +11,7 @@ local M = {}
 function M.get()
   local c = require("nano-theme.colors").get()
 
-	return {
+  return {
     FzfLuaBufNr      = { link = "Comment" },
     FzfLuaFzfPrompt  = c.nano_popout,
     FzfLuaHeaderBind = { link = "Special" },
@@ -20,7 +20,7 @@ function M.get()
     FzfLuaPathColNr  = { link = "Comment" },
     FzfLuaPathLineNr = { link = "Comment" },
     FzfLuaTabMarker  = { link = "Comment" },
-	}
+  }
 end
 
 return M
