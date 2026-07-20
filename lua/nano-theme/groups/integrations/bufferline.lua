@@ -21,7 +21,7 @@ function M.get()
     -- Tabs --------------------------------------------------------------------------------
 
     indicator_selected     = { fg = c.nano_highlight_color, bg = c.nano_highlight_color },
-    tab                    = { fg = c.fg, bg = c.nano_sublte_color },
+    tab                    = { fg = c.fg, bg = c.nano_subtle_color },
     tab_close              = { fg = c.fg, bg = c.nano_subtle_color },
     tab_selected           = { fg = c.fg, bg = c.nano_highlight_color },
     tab_separator          = { fg = c.fg, bg = c.nano_subtle_color },

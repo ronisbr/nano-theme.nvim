@@ -47,7 +47,7 @@ function M.get()
     ["@function.macro"]   = { link = "Function" },
     ["@method"]           = { link = "Function" },
     ["@method.call"]      = { link = "Function" },
-    ["@parameter"]        = c.nano_forground,
+    ["@parameter"]        = c.nano_foreground,
 
     -- Keywords ----------------------------------------------------------------------------
 
@@ -95,8 +95,8 @@ function M.get()
 
     ["@text"]                  = { link = "String" },
     ["@text.danger"]           = c.nano_critical,
-    ["@text.diff.add"]         = { link = "DiffAdded" },
-    ["@text.diff.delete"]      = { link = "DiffRemoved" },
+    ["@text.diff.add"]         = { link = "DiffAdd" },
+    ["@text.diff.delete"]      = { link = "DiffDelete" },
     ["@text.emphasis"]         = { fg = c.nano_faded_color, italic = true },
     ["@text.environment"]      = c.nano_salient,
     ["@text.environment.name"] = c.nano_faded,
@@ -110,7 +110,7 @@ function M.get()
     ["@text.todo"]             = c.nano_salient,
     ["@text.todo.checked"]     = c.nano_faded,
     ["@text.todo.unchecked"]   = c.nano_salient,
-    ["@text.underline"]        = { link = "Underline" },
+    ["@text.underline"]        = { link = "Underlined" },
     ["@text.uri"]              = { fg = c.nano_salient_color, underline = true },
     ["@text.warning"]          = c.nano_popout,
 
@@ -120,7 +120,7 @@ function M.get()
     ["@tag.attribute"] = c.nano_faded,
     ["@tag.delimiter"] = c.nano_faded,
 
-    -- Configurations Specific to Languages ------------------------------------------------
+    -- Language-Specific Configurations ----------------------------------------------------
 
     -- Markdown
     ["@text.title.1.markdown"] = c.nano_strong,
