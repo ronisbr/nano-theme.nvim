@@ -152,30 +152,12 @@ end
 
 --- Open an interactive selector to choose the light theme variant and reload the theme.
 function M.select_light_variant()
-  vim.ui.select(
-    require("nano-theme.variants").names,
-    { prompt = "Select light theme variant:" },
-    function(choice)
-      if choice then
-        M.options.light_variant = choice
-        M.apply({ notify = true })
-      end
-    end
-  )
+  require("nano-theme.selector").open("light")
 end
 
 --- Open an interactive selector to choose the dark theme variant and reload the theme.
 function M.select_dark_variant()
-  vim.ui.select(
-    require("nano-theme.variants").names,
-    { prompt = "Select dark theme variant:" },
-    function(choice)
-      if choice then
-        M.options.dark_variant = choice
-        M.apply({ notify = true })
-      end
-    end
-  )
+  require("nano-theme.selector").open("dark")
 end
 
 --- Apply the theme and optionally notify ColorScheme listeners.
@@ -244,5 +226,7 @@ end, { force = true })
 vim.api.nvim_create_user_command("NanoThemeTransparentDisable", function()
   M.set_transparent(false)
 end, { force = true })
+vim.api.nvim_create_user_command("NanoThemeLight", M.select_light_variant, { force = true })
+vim.api.nvim_create_user_command("NanoThemeDark", M.select_dark_variant, { force = true })
 
 return M
