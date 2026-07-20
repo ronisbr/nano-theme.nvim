@@ -64,6 +64,7 @@ vim.o.background = "light" -- or "dark".
 require("nano-theme").setup({
   light_variant = "default",
   dark_variant  = "default",
+  transparent   = false,
 })
 vim.cmd.colorscheme("nano-theme")
 ```
@@ -86,8 +87,13 @@ vim.cmd.colorscheme("nano-theme")
 
 ### Changing the Variant at Runtime
 
-You can interactively select the variant for the current background using the provided
-functions:
+Use `:NanoThemeLight` or `:NanoThemeDark` to select a variant for that background. The theme
+uses Neovim's overrideable `vim.ui.select`, so it honors any selector UI you configure. When
+that selector supports and calls `preview_item`, the highlighted variant is previewed. Selecting
+an item, including with Enter where supported, applies it; cancelling restores the previous
+colorscheme, background, variants, and transparency setting.
+
+The same selector is available from Lua:
 
 ```lua
 -- Open an interactive selector to change the light theme variant.
@@ -97,8 +103,33 @@ require("nano-theme").select_light_variant()
 require("nano-theme").select_dark_variant()
 ```
 
-These functions open a `vim.ui.select` prompt listing all available variants. After
-selecting one, the theme is reloaded immediately.
+The selector lists the canonical variants and keeps the light and dark selections independent.
+
+### Transparent Backgrounds
+
+Set `transparent = true` in `setup` to clear background-bearing editor and integration
+surfaces while retaining contrast for selections, searches, diagnostics, and diffs. The
+setting applies only when nano-theme is loaded and persists across nano-theme reloads.
+
+Use `:NanoThemeTransparent` to toggle it, or `:NanoThemeTransparentEnable` and
+`:NanoThemeTransparentDisable` to set it explicitly. The equivalent Lua APIs are:
+
+```lua
+require("nano-theme").toggle_transparent()
+require("nano-theme").set_transparent(true)  -- enable
+require("nano-theme").set_transparent(false) -- disable
+```
+
+When nano-theme is active, these commands and functions reapply it immediately. Otherwise,
+they update the state without changing the active colorscheme.
+
+## Tests
+
+Run the dependency-free headless test suite from the repository root:
+
+```sh
+make test
+```
 
 ## Screenshots
 
