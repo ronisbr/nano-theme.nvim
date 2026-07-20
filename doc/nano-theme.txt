@@ -1,0 +1,223 @@
+*nano-theme.txt*                                                  *nano-theme*
+
+nano-theme.nvim                         A Neovim theme based on N Λ N O Emacs
+
+==============================================================================
+CONTENTS                                                 *nano-theme-contents*
+
+1. Overview..............................................|nano-theme-overview|
+2. Requirements and installation.....................|nano-theme-installation|
+3. Setup and options........................................|nano-theme-setup|
+    Options...............................................|nano-theme-options|
+4. Variants..............................................|nano-theme-variants|
+5. Variant selection.......................................|nano-theme-select|
+6. Transparent backgrounds............................|nano-theme-transparent|
+7. API........................................................|nano-theme-api|
+8. Integrations......................................|nano-theme-integrations|
+
+==============================================================================
+OVERVIEW                                                 *nano-theme-overview*
+
+nano-theme.nvim is a Neovim theme based on the N Λ N O Emacs theme.  Its
+light background is warmer than the Emacs version, its dark background omits
+the blue tint, and its colors are tuned to meet minimum accessibility contrast
+requirements.
+
+==============================================================================
+REQUIREMENTS AND INSTALLATION                        *nano-theme-installation*
+
+The suggested installation method uses `vim.pack.add` in Neovim v0.12+:
+>
+    vim.pack.add({ "ronisbr/nano-theme.nvim" })
+    vim.o.background = "light" -- or "dark".
+    vim.cmd.colorscheme("nano-theme")
+<
+With MiniDeps, configuration and activation can be written as follows:
+>
+    MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
+    vim.o.background = "light" -- or "dark".
+    require("nano-theme").setup({
+      light_variant = "default",
+      dark_variant  = "default",
+      transparent   = false,
+    })
+    vim.cmd.colorscheme("nano-theme")
+<
+In either case, `vim.cmd.colorscheme("nano-theme")` activates the theme.
+
+==============================================================================
+SETUP                                                       *nano-theme-setup*
+
+Configure the theme before activating it:
+>
+    require("nano-theme").setup(options)
+<
+`options` is a table or nil.  Setup deep-merges supplied values into the
+current options.  It rejects unknown light and dark variant names.
+
+OPTIONS                                                   *nano-theme-options*
+
+The defaults are:
+>
+    {
+      light_variant = "default",
+      dark_variant  = "default",
+      transparent   = false,
+    }
+<
+`light_variant` and `dark_variant` select palettes for their respective
+background modes.  See |nano-theme-variants|.  `transparent` controls the
+background behavior described in |nano-theme-transparent|.
+
+==============================================================================
+VARIANTS                                                 *nano-theme-variants*
+
+The light and dark variants are selected independently.  `vim.o.background`
+chooses which background mode is active.  There are 11 valid variant names:
+
+amber ~
+    Amber phosphor CRT monitor palette. Dark mode uses a near-black background
+    with warm golden-amber glowing text; light mode uses a warm parchment
+    background with deep amber ink.
+
+blue ~
+    Cool, steel-blue tinted palette where backgrounds and accents lean toward
+    blue tones.
+
+default ~
+    Warm, slightly tinted palette faithful to the original N Λ N O Emacs
+    theme.
+
+gilded ~
+    Ink, paper, and gold palette — a sibling of `ink` with a softer, warmer
+    character. Dark mode uses a blue-tinted ink background with warm paper
+    text, a gilded gold salient, and a muted teal popout; light mode uses a
+    warm paper background with dark ink text. Choose `ink` for maximum neutral
+    contrast, `gilded` for the tinted, paper-like rendition of the same
+    gold/cool-accent scheme.
+
+gray ~
+    Fully desaturated, neutral gray palette. Salient and popout faces use
+    achromatic tones for a monochrome feel.
+
+green ~
+    Nature-inspired palette with green-tinted backgrounds.
+
+ink ~
+    High-contrast variant with near-pure black/white neutral backgrounds and
+    warm amber/blue accent hues. The crisper, fully neutral sibling of
+    `gilded`.
+
+jinx ~
+    Arcane-inspired palette. Both modes share the same role mapping:
+    magenta-pink salient (Jinx's hair), Hextech neon-blue strong, and electric
+    teal-cyan popout. Light mode uses a near-white background with a barely
+    perceptible grey-pink tint; dark mode uses a near-black background with a
+    subtle violet tint.
+
+old_terminal ~
+    Retro phosphor monitor palette. Dark mode uses near-black background with
+    bright green text; light mode uses a green-tinted background with dark
+    green text.
+
+orange ~
+    Warm, earthy palette with orange-tinted backgrounds and amber accents.
+
+rougier ~
+    Palette closest to the original N Λ N O Emacs theme by @rougier, with
+    minimal modifications.
+
+==============================================================================
+VARIANT SELECTION                                          *nano-theme-select*
+
+Use these commands to select the variant for one background mode:
+
+    :NanoThemeLight        Select the light variant.
+    :NanoThemeDark         Select the dark variant.
+
+The equivalent Lua APIs are:
+>
+    require("nano-theme").select_light_variant()
+    require("nano-theme").select_dark_variant()
+<
+The selector uses `vim.ui.select` and lists all canonical variants.  If the
+active selector UI calls its `preview_item` callback, highlighted choices are
+previewed without notifying ColorScheme listeners.  Accepting a choice sets
+`vim.o.background` to the selected mode, applies the choice, and emits a
+ColorScheme notification.  If a preview was shown, cancelling restores the
+previous colorscheme, background, light and dark variants, and transparency
+setting.  Cancelling without a preview makes no change.
+
+==============================================================================
+TRANSPARENT BACKGROUNDS                               *nano-theme-transparent*
+
+Set `transparent = true` in |nano-theme-setup| to clear background-bearing
+editor and integration surfaces while retaining contrast for selections,
+searches, diagnostics, diffs, and statusline mode badges.  The setting applies
+when nano-theme is loaded and persists across nano-theme reloads.
+
+The commands are:
+
+    :NanoThemeTransparent          Toggle transparency.
+    :NanoThemeTransparentEnable    Enable transparency.
+    :NanoThemeTransparentDisable   Disable transparency.
+
+The equivalent Lua calls are:
+>
+    require("nano-theme").toggle_transparent()
+    require("nano-theme").set_transparent(true)
+    require("nano-theme").set_transparent(false)
+<
+When nano-theme is active, these commands and functions reapply it
+immediately.  When another colorscheme is active, they update nano-theme's
+state without changing that colorscheme.
+
+==============================================================================
+API                                                           *nano-theme-api*
+
+Only the functions returned by `require("nano-theme")` are documented here.
+
+setup(options) ~
+    `options: table|nil`
+    Deep-merge options and validate the light and dark variant names.  See
+    |nano-theme-setup| and |nano-theme-options|.
+
+apply(options) ~
+    `options: table|nil`
+    Apply nano-theme directly.  If `options.notify` is true, emit one
+    ColorScheme notification for nano-theme after applying it.
+
+load() ~
+    Apply nano-theme without manually emitting a ColorScheme notification.
+    The `:colorscheme nano-theme` command emits that event after loading.
+
+select_light_variant() ~
+    Open the light variant selector.  See |nano-theme-select|.
+
+select_dark_variant() ~
+    Open the dark variant selector.  See |nano-theme-select|.
+
+set_transparent(enabled) ~
+    `enabled: boolean`
+    Enable or disable transparent backgrounds.  Reapply immediately only when
+    nano-theme is active.
+
+toggle_transparent() -> boolean ~
+    Toggle transparent backgrounds and return the newly enabled state.
+
+==============================================================================
+INTEGRATIONS                                         *nano-theme-integrations*
+
+nano-theme defines highlight groups for these integrations:
+
+    bufferline        copilot           dashboard
+    fzf-lua           indent-blankline  mini
+    neogit            neotree           noice
+    notify            nvim-lsp          telescope
+    treesitter
+
+These highlights do not install or configure the corresponding plugins.
+
+==============================================================================
+
+vim:tw=78:ts=8:noet:ft=help:norl:
