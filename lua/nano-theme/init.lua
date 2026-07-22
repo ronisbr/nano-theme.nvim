@@ -70,7 +70,6 @@ end
 
 local transparent_groups = {
   -- Editor surfaces -----------------------------------------------------------------------
-  ColorColumn = true,
   FoldColumn = true,
   Folded = true,
   Normal = true,
