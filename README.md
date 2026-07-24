@@ -89,6 +89,7 @@ preserve the previous float appearance. `setup` validates both new values.
 | `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
 | `rougier` | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications. |
+| `wood` | Timber-inspired palette. Dark mode is walnut heartwood — a deep espresso background with oak-cream text, a honey salient, and a mahogany popout; light mode is sanded oak — a pale pine background with dark walnut ink, a chestnut salient, and a verdigris popout. Syntax hues are muted toward natural grain and patina tones. |
 
 ### Changing the Variant at Runtime
 

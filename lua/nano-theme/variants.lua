@@ -18,6 +18,7 @@ M.names = {
   "old_terminal",
   "orange",
   "rougier",
+  "wood",
 }
 
 local registry = {}
