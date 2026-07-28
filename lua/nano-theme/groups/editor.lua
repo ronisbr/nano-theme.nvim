@@ -14,6 +14,7 @@ function M.get(options)
   local transparent_float = options.transparent and options.transparent_floats
   local float_bg = transparent_float and "NONE" or c.bg
   local float_blend = transparent_float and 0 or options.float_blend
+  local pmenu_bg = transparent_float and "NONE" or c.bg_alt
 
   return {
     ColorColumn   = { bg = c.nano_highlight_color },
@@ -43,10 +44,10 @@ function M.get(options)
     NormalFloat   = { fg = c.fg, bg = float_bg, blend = float_blend },
     NormalNC      = { link = "Normal" },
     NormalSB      = { link = "Normal" },
-    Pmenu         = { fg = c.fg, bg = c.bg_alt },
-    PmenuSbar     = { bg = c.nano_faded_color },
+    Pmenu         = { fg = c.fg, bg = pmenu_bg, blend = float_blend },
+    PmenuSbar     = { bg = transparent_float and "NONE" or c.nano_faded_color, blend = float_blend },
     PmenuSel      = { bg = c.nano_subtle_color },
-    PmenuThumb    = { bg = c.nano_foreground_color },
+    PmenuThumb    = { bg = transparent_float and "NONE" or c.nano_foreground_color, blend = float_blend },
     OkMsg         = c.nano_salient,
     Question      = c.nano_foreground,
     QuickFixLine  = c.nano_salient,

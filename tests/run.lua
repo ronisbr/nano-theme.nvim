@@ -154,6 +154,10 @@ local ok, failure = xpcall(function()
   assert_tiny_cmdline_surface(nil, 0, "tiny-cmdline floats are not fully transparent")
   assert_link("TelescopeBorder", "FloatBorder")
   assert_true(highlight("TelescopeBorder").bg == nil, "linked float border is not transparent")
+  for _, name in ipairs({ "Pmenu", "PmenuSbar", "PmenuThumb" }) do
+    assert_true(highlight(name).bg == nil, name .. " is not fully transparent")
+    assert_true((highlight(name).blend or 0) == 0, name .. " foreground cells were faded")
+  end
   theme.load()
   assert_true(highlight("Normal").bg == nil, "transparency did not survive reload")
   assert_float_surface(nil, 0, "float transparency did not survive reload")
@@ -175,6 +179,10 @@ local ok, failure = xpcall(function()
     assert_true(highlight(name).blend == 37, name .. " did not inherit float blend")
   end
   assert_tiny_cmdline_surface(float_background, 37, "tiny-cmdline did not inherit retained float settings")
+  for _, name in ipairs({ "Pmenu", "PmenuSbar", "PmenuThumb" }) do
+    assert_true(highlight(name).bg ~= nil, name .. " lost its background")
+    assert_true(highlight(name).blend == 37, name .. " did not inherit float blend")
+  end
   theme.load()
   assert_float_surface(float_background, 37, "retained float settings did not survive reload")
   assert_tiny_cmdline_surface(float_background, 37, "tiny-cmdline retained settings did not survive reload")
