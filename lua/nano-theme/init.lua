@@ -136,11 +136,22 @@ local integrations = {
 }
 
 local function set_groups(groups)
+  local transparent = M.options.transparent
+  local set_hl = vim.api.nvim_set_hl
+
   for name, val in pairs(groups) do
-    if M.options.transparent and transparent_groups[name] and not val.link then
-      val = vim.tbl_extend("force", val, { bg = "NONE" })
+    if transparent and transparent_groups[name] and not val.link then
+      local copy = {}
+
+      for k, v in pairs(val) do
+        copy[k] = v
+      end
+
+      copy.bg = "NONE"
+      val = copy
     end
-    vim.api.nvim_set_hl(0, name, val)
+
+    set_hl(0, name, val)
   end
 end
 
