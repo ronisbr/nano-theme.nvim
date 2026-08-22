@@ -86,6 +86,7 @@ preserve the previous float appearance. `setup` validates both new values.
 | `green` | Nature-inspired palette with green-tinted backgrounds. |
 | `ink` | High-contrast variant with near-pure black/white neutral backgrounds and warm amber/blue accent hues. The crisper, fully neutral sibling of `gilded`. |
 | `jinx` | Arcane-inspired palette. Both modes share the same role mapping: magenta-pink salient (Jinx's hair), Hextech neon-blue strong, and electric teal-cyan popout. Light mode uses a near-white background with a barely perceptible grey-pink tint; dark mode uses a near-black background with a subtle violet tint. |
+| `ocean` | Deep marine palette. Light mode is sea glass — a cool aqua-tinted background with deep teal ink and a rust popout; dark mode is deep sea — a blue-green abyss background with a bright cyan-teal salient and a sandy amber popout. Leans teal where `blue` leans steel. |
 | `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
 | `rose` | Soft rose-quartz palette. Light mode is dawn — a warm near-white background with a barely perceptible pink tint, a muted raspberry salient, and a sea-glass teal popout; dark mode is dusk — a mauve-tinted near-black background with rosy text and a soft rose salient. |

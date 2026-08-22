@@ -95,7 +95,7 @@ through 100.
 VARIANTS                                                 *nano-theme-variants*
 
 The light and dark variants are selected independently.  `vim.o.background`
-chooses which background mode is active.  There are 13 valid variant names:
+chooses which background mode is active.  There are 14 valid variant names:
 
 amber ~
     Amber phosphor CRT monitor palette. Dark mode uses a near-black background
@@ -136,6 +136,12 @@ jinx ~
     teal-cyan popout. Light mode uses a near-white background with a barely
     perceptible grey-pink tint; dark mode uses a near-black background with a
     subtle violet tint.
+
+ocean ~
+    Deep marine palette. Light mode is sea glass — a cool aqua-tinted
+    background with deep teal ink and a rust popout; dark mode is deep sea — a
+    blue-green abyss background with a bright cyan-teal salient and a sandy
+    amber popout. Leans teal where `blue` leans steel.
 
 old_terminal ~
     Retro phosphor monitor palette. Dark mode uses near-black background with
