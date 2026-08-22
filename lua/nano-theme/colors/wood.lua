@@ -12,14 +12,6 @@ local M = {}
 --- Return the color table for the wood light variant (sanded oak / pine).
 ---@return table # Color table for the wood light variant.
 function M.light()
-  local base6   = "#5E4A32"  -- dark grain
-  local red     = "#A83828"  -- cherry / mahogany
-  local green   = "#527026"  -- olive leaf
-  local yellow  = "#836310"  -- amber-brown
-  local blue    = "#2A6086"  -- steel
-  local magenta = "#8A3A70"  -- aged plum
-  local cyan    = "#187268"  -- verdigris
-
   return build_colors({
     nano_foreground_color = "#402F1C",  -- walnut ink
     nano_background_color = "#F6EEE0",
@@ -32,34 +24,21 @@ function M.light()
     nano_popout_color     = "#2E6A64",  -- verdigris pop
     nano_critical_color   = "#B23A16",
 
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = green,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = magenta,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = green,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = magenta,
-    terminal_color_14 = cyan,
+    ansi = {
+      black   = "#5E4A32",  -- dark grain
+      red     = "#A83828",  -- cherry / mahogany
+      green   = "#527026",  -- olive leaf
+      yellow  = "#836310",  -- amber-brown
+      blue    = "#2A6086",  -- steel
+      magenta = "#8A3A70",  -- aged plum
+      cyan    = "#187268",  -- verdigris
+    },
   })
 end
 
 --- Return the color table for the wood dark variant (walnut heartwood).
 ---@return table # Color table for the wood dark variant.
 function M.dark()
-  local base6   = "#8A6C4C"  -- weathered oak
-  local red     = "#E06A56"  -- cherry
-  local green   = "#7FA65A"  -- moss
-  local yellow  = "#D4A94C"  -- honey
-  local blue    = "#6A94B0"  -- faded denim
-  local magenta = "#BE7AAA"  -- aged plum
-  local cyan    = "#4FA898"  -- verdigris
-
   return build_colors({
     nano_foreground_color = "#DCC9AC",  -- oak cream
     nano_background_color = "#241A12",
@@ -72,20 +51,15 @@ function M.dark()
     nano_popout_color     = "#B5744A",  -- mahogany accent
     nano_critical_color   = "#E0623A",
 
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = green,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = magenta,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = green,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = magenta,
-    terminal_color_14 = cyan,
+    ansi = {
+      black   = "#8A6C4C",  -- weathered oak
+      red     = "#E06A56",  -- cherry
+      green   = "#7FA65A",  -- moss
+      yellow  = "#D4A94C",  -- honey
+      blue    = "#6A94B0",  -- faded denim
+      magenta = "#BE7AAA",  -- aged plum
+      cyan    = "#4FA898",  -- verdigris
+    },
   })
 end
 

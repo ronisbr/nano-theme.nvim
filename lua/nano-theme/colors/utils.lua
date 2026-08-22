@@ -6,8 +6,11 @@
 
 local M = {}
 
---- Build the full color table from the raw color values and terminal color mapping.
----@param raw table Table of raw hex color strings and terminal color values.
+--- Build the full color table from the raw color values.
+---@param raw table Table with the nano semantic colors and an `ansi` table providing the
+---                 black, red, green, yellow, blue, magenta, and cyan terminal colors.
+---                 Bright terminal colors mirror the normal ones, and white follows the
+---                 foreground color.
 ---@return table # Color table with named semantic colors, highlight decorations, and
 ---                terminal colors.
 function M.build_colors(raw)
@@ -41,21 +44,21 @@ function M.build_colors(raw)
 
     -- Terminal Colors ---------------------------------------------------------------------
 
-    terminal_color_0  = raw.terminal_color_0,
-    terminal_color_1  = raw.terminal_color_1,
-    terminal_color_2  = raw.terminal_color_2,
-    terminal_color_3  = raw.terminal_color_3,
-    terminal_color_4  = raw.terminal_color_4,
-    terminal_color_5  = raw.terminal_color_5,
-    terminal_color_6  = raw.terminal_color_6,
+    terminal_color_0  = raw.ansi.black,
+    terminal_color_1  = raw.ansi.red,
+    terminal_color_2  = raw.ansi.green,
+    terminal_color_3  = raw.ansi.yellow,
+    terminal_color_4  = raw.ansi.blue,
+    terminal_color_5  = raw.ansi.magenta,
+    terminal_color_6  = raw.ansi.cyan,
     terminal_color_7  = raw.nano_foreground_color,
-    terminal_color_8  = raw.terminal_color_8,
-    terminal_color_9  = raw.terminal_color_9,
-    terminal_color_10 = raw.terminal_color_10,
-    terminal_color_11 = raw.terminal_color_11,
-    terminal_color_12 = raw.terminal_color_12,
-    terminal_color_13 = raw.terminal_color_13,
-    terminal_color_14 = raw.terminal_color_14,
+    terminal_color_8  = raw.ansi.black,
+    terminal_color_9  = raw.ansi.red,
+    terminal_color_10 = raw.ansi.green,
+    terminal_color_11 = raw.ansi.yellow,
+    terminal_color_12 = raw.ansi.blue,
+    terminal_color_13 = raw.ansi.magenta,
+    terminal_color_14 = raw.ansi.cyan,
     terminal_color_15 = raw.nano_foreground_color,
   }
 end

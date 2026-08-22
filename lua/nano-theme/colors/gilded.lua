@@ -14,14 +14,6 @@ local M = {}
 --- Return the color table for the gilded light variant.
 ---@return table # Color table for the gilded light variant.
 function M.light()
-  local base6   = "#4E4F48"
-  local red     = "#B8331E"
-  local green   = "#3E7A44"
-  local yellow  = "#996414"
-  local blue    = "#38608A"
-  local magenta = "#8A4A78"
-  local cyan    = "#387077"
-
   return build_colors({
     nano_foreground_color = "#1B1D22",
     nano_background_color = "#F6F3EC",
@@ -34,34 +26,21 @@ function M.light()
     nano_popout_color     = "#387077",
     nano_critical_color   = "#B8331E",
 
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = green,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = magenta,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = green,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = magenta,
-    terminal_color_14 = cyan,
+    ansi = {
+      black   = "#4E4F48",
+      red     = "#B8331E",
+      green   = "#3E7A44",
+      yellow  = "#996414",
+      blue    = "#38608A",
+      magenta = "#8A4A78",
+      cyan    = "#387077",
+    },
   })
 end
 
 --- Return the color table for the gilded dark variant.
 ---@return table # Color table for the gilded dark variant.
 function M.dark()
-  local base6   = "#828A96"
-  local red     = "#E0604E"
-  local green   = "#91B07A"
-  local yellow  = "#D8A24A"
-  local blue    = "#7193B8"
-  local magenta = "#B08CB0"
-  local cyan    = "#6FA8B0"
-
   return build_colors({
     nano_foreground_color = "#D8D5CD",
     nano_background_color = "#0D1014",
@@ -74,20 +53,15 @@ function M.dark()
     nano_popout_color     = "#69A0A8",
     nano_critical_color   = "#FF7058",
 
-    terminal_color_0  = base6,
-    terminal_color_1  = red,
-    terminal_color_2  = green,
-    terminal_color_3  = yellow,
-    terminal_color_4  = blue,
-    terminal_color_5  = magenta,
-    terminal_color_6  = cyan,
-    terminal_color_8  = base6,
-    terminal_color_9  = red,
-    terminal_color_10 = green,
-    terminal_color_11 = yellow,
-    terminal_color_12 = blue,
-    terminal_color_13 = magenta,
-    terminal_color_14 = cyan,
+    ansi = {
+      black   = "#828A96",
+      red     = "#E0604E",
+      green   = "#91B07A",
+      yellow  = "#D8A24A",
+      blue    = "#7193B8",
+      magenta = "#B08CB0",
+      cyan    = "#6FA8B0",
+    },
   })
 end
 
