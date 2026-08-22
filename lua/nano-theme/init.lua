@@ -162,6 +162,27 @@ local function notify_colorscheme()
   })
 end
 
+--- Reload the lualine theme when lualine is loaded and configured to use nano-theme.
+local function refresh_lualine()
+  if package.loaded["lualine"] == nil then
+    return
+  end
+
+  -- Force the lualine theme module to recompute its colors on the next require.
+  package.loaded["lualine.themes.nano-theme"] = nil
+
+  local lualine = require("lualine")
+  local ok, config = pcall(lualine.get_config)
+
+  if not ok or type(config) ~= "table" then
+    return
+  end
+
+  if config.options and config.options.theme == "nano-theme" then
+    pcall(lualine.setup, config)
+  end
+end
+
 --- Open an interactive selector to choose the light theme variant and reload the theme.
 function M.select_light_variant()
   require("nano-theme.selector").open("light")
@@ -203,6 +224,8 @@ function M.apply(options)
   for i = 0, 15 do
     vim.g["terminal_color_" .. i] = c["terminal_color_" .. i]
   end
+
+  refresh_lualine()
 
   if options.notify then
     notify_colorscheme()

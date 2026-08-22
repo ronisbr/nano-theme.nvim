@@ -345,6 +345,26 @@ local ok, failure = xpcall(function()
   assert_true(notifications == 0, "nil without preview emitted ColorScheme")
 
   vim.ui.select = original_select
+
+  -- Applying the theme refreshes a lualine instance configured with the nano-theme theme.
+  local lualine_setups = 0
+  package.loaded["lualine.themes.nano-theme"] = { stale = true }
+  package.loaded["lualine"] = {
+    get_config = function()
+      return { options = { theme = "nano-theme" } }
+    end,
+    setup = function(_)
+      lualine_setups = lualine_setups + 1
+    end,
+  }
+  theme.load()
+  assert_true(lualine_setups == 1, "apply did not refresh lualine")
+  local cached_lualine_theme = package.loaded["lualine.themes.nano-theme"]
+  assert_true(
+    cached_lualine_theme == nil or cached_lualine_theme.stale == nil,
+    "stale lualine theme module was not invalidated"
+  )
+  package.loaded["lualine"] = nil
 end, debug.traceback)
 
 if not ok then
