@@ -12,9 +12,9 @@
 </p>
 
 <p align="center">
-  <img alt="Neovim 0.9+" src="https://img.shields.io/badge/Neovim-0.9%2B-57A143?logo=neovim&logoColor=white">
-  <img alt="Made with Lua" src="https://img.shields.io/badge/Made%20with-Lua-2C2D72?logo=lua&logoColor=white">
-  <img alt="License GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-8A94A6">
+  <a href="https://neovim.io"><img alt="Neovim 0.9+" src="https://img.shields.io/badge/Neovim-0.9%2B-57A143?style=flat-square&logo=neovim&logoColor=white&labelColor=475569"></a>
+  <a href="https://www.lua.org"><img alt="Made with Lua" src="https://img.shields.io/badge/Made%20with-Lua-2C2D72?style=flat-square&logo=lua&logoColor=white&labelColor=475569"></a>
+  <a href="./LICENSE.txt"><img alt="License GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-0284C7?style=flat-square&logo=readme&logoColor=white&labelColor=475569"></a>
 </p>
 
 ## Philosophy
