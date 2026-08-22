@@ -88,6 +88,7 @@ preserve the previous float appearance. `setup` validates both new values.
 | `jinx` | Arcane-inspired palette. Both modes share the same role mapping: magenta-pink salient (Jinx's hair), Hextech neon-blue strong, and electric teal-cyan popout. Light mode uses a near-white background with a barely perceptible grey-pink tint; dark mode uses a near-black background with a subtle violet tint. |
 | `old_terminal` | Retro phosphor monitor palette. Dark mode uses near-black background with bright green text; light mode uses a green-tinted background with dark green text. |
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
+| `rose` | Soft rose-quartz palette. Light mode is dawn — a warm near-white background with a barely perceptible pink tint, a muted raspberry salient, and a sea-glass teal popout; dark mode is dusk — a mauve-tinted near-black background with rosy text and a soft rose salient. |
 | `rougier` | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications. |
 | `wood` | Timber-inspired palette. Dark mode is walnut heartwood — a deep espresso background with oak-cream text, a honey salient, and a mahogany popout; light mode is sanded oak — a pale pine background with dark walnut ink, a chestnut salient, and a verdigris popout. Syntax hues are muted toward natural grain and patina tones. |
 

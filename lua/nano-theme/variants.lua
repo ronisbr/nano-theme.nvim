@@ -17,6 +17,7 @@ M.names = {
   "jinx",
   "old_terminal",
   "orange",
+  "rose",
   "rougier",
   "wood",
 }
