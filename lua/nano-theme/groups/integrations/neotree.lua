@@ -12,7 +12,7 @@ function M.get()
   local c = require("nano-theme.colors").get()
 
   return {
-    NeoTreeCursorLine         = { bg = c.bg },
+    NeoTreeCursorLine         = { bg = c.nano_subtle_color },
     NeoTreeDimText            = c.nano_faded,
     NeoTreeDirectoryIcon      = c.nano_salient,
     NeoTreeDirectoryName      = c.nano_foreground,
