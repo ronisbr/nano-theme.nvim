@@ -12,7 +12,7 @@
 
 # == Configuration =========================================================================
 
-.PHONY: help helptags panel test
+.PHONY: help helptags logo panel test
 
 .DEFAULT_GOAL := test
 
@@ -43,8 +43,12 @@ helptags:
 
 ##@ Assets
 
+## Regenerate the adaptive logo (screenshots/logo-light.svg and logo-dark.svg)
+logo:
+	nvim --headless -u NONE -c "lua dofile('scripts/logo.lua')"
+
 ## Regenerate the variant palette panel (screenshots/variants.svg and .png)
-panel:
+panel: logo
 	nvim --headless -u NONE -c "lua dofile('scripts/panel.lua')"
 	@if command -v rsvg-convert >/dev/null 2>&1; then \
 		rsvg-convert --width 1440 --keep-aspect-ratio --output screenshots/variants.png screenshots/variants.svg; \

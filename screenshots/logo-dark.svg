@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150" role="img" aria-label="N Λ N O Theme for Neovim">
+<circle cx="200" cy="26" r="5" fill="#E8C46A" stroke="rgba(128,128,128,0.25)"/>
+<circle cx="224" cy="26" r="5" fill="#D08770" stroke="rgba(128,128,128,0.25)"/>
+<circle cx="248" cy="26" r="5" fill="#F0EFEB" stroke="rgba(128,128,128,0.25)"/>
+<circle cx="272" cy="26" r="5" fill="#7A9DB8" stroke="rgba(128,128,128,0.25)"/>
+<circle cx="296" cy="26" r="5" fill="#969690" stroke="rgba(128,128,128,0.25)"/>
+<circle cx="320" cy="26" r="5" fill="#484846" stroke="rgba(128,128,128,0.25)"/>
+<text x="260" y="92" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="56" font-weight="600" letter-spacing="8" text-anchor="middle" fill="#D4D0CA">N <tspan fill="#7A9DB8">&#x39B;</tspan> N O</text>
+<text x="260" y="126" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" letter-spacing="6" text-anchor="middle" fill="#969690">A THEME FOR NEOVIM</text>
+</svg>

@@ -1,47 +1,52 @@
-# Neovim N Λ N O Theme
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./screenshots/logo-dark.svg">
+    <img alt="N Λ N O — A Theme for Neovim" src="./screenshots/logo-light.svg" width="480">
+  </picture>
+</p>
 
-<p align="center"><img src="screenshots/nano-theme-nvim.png" alt="nano-theme.nvim"></p>
+<p align="center">
+  A Neovim port of @rougier's excellent
+  <a href="https://github.com/rougier/nano-theme">N Λ N O Theme</a> for Emacs:
+  six semantic faces, 15 curated variants, and independent light and dark modes.
+</p>
 
-This package adapts @rougier's excellent
-[N Λ N O Theme](https://github.com/rougier/nano-theme) for Emacs to Neovim.
+<p align="center">
+  <img alt="Neovim 0.9+" src="https://img.shields.io/badge/Neovim-0.9%2B-57A143?logo=neovim&logoColor=white">
+  <img alt="Made with Lua" src="https://img.shields.io/badge/Made%20with-Lua-2C2D72?logo=lua&logoColor=white">
+  <img alt="License GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-8A94A6">
+</p>
 
-N Λ N O Theme is a minimalist color scheme based on six colors only:
+## Philosophy
 
-- **Critical face** is for information that requires immediate action.
+Instead of a large syntax rainbow, N Λ N O builds every screen from six semantic faces:
 
-> It should be of high contrast when compared to other faces. It must be used scarcely.
+| Face | Purpose |
+|:--|:--|
+| **Critical** | Information that requires immediate action — high contrast, used scarcely. |
+| **Popout** | Information that needs attention, attracted by a clearly different hue. |
+| **Strong** | Structural information such as titles and keywords — the default color with a heavier weight. |
+| **Salient** | Important information — a different hue with roughly the same intensity as the default face. |
+| **Faded** | Less important information such as comments — the default hue family at a lower intensity. |
+| **Subtle** | Physical delimitation of screen areas through barely perceptible backgrounds. |
 
-- **Popout face** is used for information that needs attention.
+Compared to the Emacs original, the light background is warmer, the dark background omits
+the blue tint, and the colors are tuned to meet minimum accessibility contrast
+requirements.
 
-> To achieve such effect, the hue of the face has to be sufficiently different from other
-> faces such that it attracts attention through the popout effect.
+## Features
 
-- **Strong face** is used for information of a structural nature.
-
-> It has to be the same color as the default color and only the weight differs by one level
-> (e.g., light/regular or regular/bold). It is generally used for titles, keywords,
-> directory, etc.
-
-- **Salient face** is used for information that is important.
-
-> To suggest the information is of the same nature but important, the face uses a different
-> hue with approximately the same intensity as the default face. This is typically used for
-> links.
-
-- **Faded face** is for information that is less important.
-
-> It is made by using a hue similar to the default face but with a lesser intensity than the
-> default. It can be used for comments, secondary information and also replace italic (which
-> is generally abused anyway).
-
-- **Subtle face** is used to suggest a physical area on the screen.
-
-> It is important to not disturb too strongly the reading of information and this can be
-> made by setting a very light background color that is barely perceptible.
-
-This Neovim version is slightly modified compared to the Emacs version. Its light background
-is warmer, its dark background omits the blue tint, and its colors are tuned to meet minimum
-accessibility contrast requirements.
+- 15 variants, with the light and dark palettes selected independently.
+- Live variant selector built on `vim.ui.select`, with previews when the selector UI
+  supports them.
+- Transparent backgrounds that retain contrast for selections, searches, diagnostics, and
+  diffs, with optional blended float backgrounds.
+- Modern treesitter captures (Neovim 0.10+, with the legacy names kept for older
+  versions), LSP semantic tokens, colored diagnostic undercurls, and inlay hints.
+- Terminal colors, a lualine theme that follows runtime variant switches, and integrations
+  for bufferline, copilot, dashboard, fzf-lua, indent-blankline, mini.nvim, neogit,
+  neo-tree, noice, notify, telescope, tiny-cmdline, and treesitter.
+- A dependency-free headless test suite.
 
 ## Installation
 
@@ -53,28 +58,43 @@ vim.o.background = "light" -- or "dark".
 vim.cmd.colorscheme("nano-theme")
 ```
 
-## Configuration
-
-You can configure the theme variant independently for light and dark backgrounds by calling
-the `setup` function:
+With MiniDeps:
 
 ```lua
 MiniDeps.add({ source = "ronisbr/nano-theme.nvim" })
 vim.o.background = "light" -- or "dark".
+vim.cmd.colorscheme("nano-theme")
+```
+
+## Configuration
+
+Call `setup` before activating the colorscheme to change the defaults:
+
+```lua
 require("nano-theme").setup({
-  light_variant       = "default",
-  dark_variant        = "default",
-  transparent         = false,
-  transparent_floats  = true,
-  float_blend         = 0,
+  light_variant      = "default",
+  dark_variant       = "default",
+  transparent        = false,
+  transparent_floats = true,
+  float_blend        = 0,
 })
 vim.cmd.colorscheme("nano-theme")
 ```
 
-These are the defaults; `transparent_floats = true` and `float_blend = 0`
-preserve the previous float appearance. `setup` validates both new values.
+| Option | Default | Description |
+|:--|:--|:--|
+| `light_variant` | `"default"` | Variant applied when `background` is `light`. |
+| `dark_variant` | `"default"` | Variant applied when `background` is `dark`. |
+| `transparent` | `false` | Clear background-bearing editor and integration surfaces. |
+| `transparent_floats` | `true` | When transparency is on, make `NormalFloat`, `FloatBorder`, and `FloatTitle` fully transparent instead of retaining Nano's float background. |
+| `float_blend` | `0` | Integer from 0 through 100 applied to Nano float highlight groups when their background is retained. It does not mutate Neovim's `winblend` option. |
 
-### Variants
+`setup` validates the variant names and the float options. See `:h nano-theme` for the
+full documentation.
+
+## Variants
+
+![Variant palettes](./screenshots/variants.png)
 
 | Variant | Description |
 |:--|:--|
@@ -94,35 +114,28 @@ preserve the previous float appearance. `setup` validates both new values.
 | `violet` | Quiet lavender palette. Light mode uses a lilac-tinted near-white background with a soft violet salient and a warm amber popout; dark mode is aubergine — a violet-tinted near-black background with lavender text. Stays muted where `jinx` is electric. |
 | `wood` | Timber-inspired palette. Dark mode is walnut heartwood — a deep espresso background with oak-cream text, a honey salient, and a mahogany popout; light mode is sanded oak — a pale pine background with dark walnut ink, a chestnut salient, and a verdigris popout. Syntax hues are muted toward natural grain and patina tones. |
 
-### Changing the Variant at Runtime
+## Runtime Controls
 
-Use `:NanoThemeLight` or `:NanoThemeDark` to select a variant for that background. The theme
-uses Neovim's overrideable `vim.ui.select`, so it honors any selector UI you configure. When
-that selector supports and calls `preview_item`, the highlighted variant is previewed. Selecting
-an item, including with Enter where supported, applies it; cancelling restores the previous
-colorscheme, background, variants, and transparency setting.
+### Variant Selection
+
+Use `:NanoThemeLight` or `:NanoThemeDark` to pick the variant for that background mode.
+The selector uses Neovim's overrideable `vim.ui.select`, so it honors any selector UI you
+configure. When that selector supports and calls `preview_item`, the highlighted variant
+is previewed; selecting an item applies it, and cancelling restores the previous
+colorscheme, background, variants, and transparency settings.
 
 The same selector is available from Lua:
 
 ```lua
--- Open an interactive selector to change the light theme variant.
 require("nano-theme").select_light_variant()
-
--- Open an interactive selector to change the dark theme variant.
 require("nano-theme").select_dark_variant()
 ```
 
-The selector lists the canonical variants and keeps the light and dark selections independent.
-
 ### Transparent Backgrounds
 
-Set `transparent = true` in `setup` to clear background-bearing editor and integration
-surfaces while retaining contrast for selections, searches, diagnostics, and diffs. The
-setting applies only when nano-theme is loaded and persists across nano-theme reloads.
-
-When general transparency is enabled, `transparent_floats = true` makes
-`NormalFloat`, `FloatBorder`, and `FloatTitle` fully transparent. Set it to `false` to
-retain Nano's native float background. For a recommended dark tinted float setup, use:
+Set `transparent = true` in `setup` to clear background-bearing surfaces while retaining
+contrast for selections, searches, diagnostics, and diffs. By default the floats become
+fully transparent too; for a recommended dark tinted float setup, use:
 
 ```lua
 require("nano-theme").setup({
@@ -132,12 +145,7 @@ require("nano-theme").setup({
 })
 ```
 
-`float_blend` is an integer from 0 through 100 applied to Nano float highlight groups
-when their background is retained: 0 is opaque and 100 is maximally blended. It does
-not mutate Neovim's `winblend` option. Plugins with custom, non-linked float highlights
-may not inherit it.
-
-Use `:NanoThemeTransparent` to toggle it, or `:NanoThemeTransparentEnable` and
+Use `:NanoThemeTransparent` to toggle transparency, or `:NanoThemeTransparentEnable` and
 `:NanoThemeTransparentDisable` to set it explicitly. The equivalent Lua APIs are:
 
 ```lua
@@ -146,10 +154,10 @@ require("nano-theme").set_transparent(true)  -- enable
 require("nano-theme").set_transparent(false) -- disable
 ```
 
-When nano-theme is active, these commands and functions reapply it immediately. Otherwise,
-they update the state without changing the active colorscheme.
+When nano-theme is active, these commands and functions reapply it immediately.
+Otherwise, they update the state without changing the active colorscheme.
 
-## Tests
+## Development
 
 Run the dependency-free headless test suite from the repository root:
 
@@ -157,10 +165,18 @@ Run the dependency-free headless test suite from the repository root:
 make test
 ```
 
-## Variant Palettes
+The logo and the variants panel are generated from the palette definitions in
+`lua/nano-theme/colors`, so they always match the code:
 
-![Variant palettes](./screenshots/variants.png)
+```sh
+make logo   # screenshots/logo-light.svg and logo-dark.svg
+make panel  # screenshots/variants.svg and variants.png (also refreshes the logo)
+```
 
-This panel is generated directly from the palette definitions in `lua/nano-theme/colors`,
-so it always matches the code. Regenerate it with `make panel` (rendering the PNG requires
-`librsvg` or `resvg`; without them the target still writes the SVG).
+Rendering the panel PNG requires `librsvg` (`rsvg-convert`) or `resvg`; when `pngquant`
+is available, the PNG is also optimized.
+
+## License
+
+nano-theme.nvim is licensed under the GNU General Public License v3.0. See
+[LICENSE.txt](./LICENSE.txt) for details.
