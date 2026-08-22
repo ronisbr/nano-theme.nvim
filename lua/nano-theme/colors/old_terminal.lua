@@ -20,15 +20,6 @@ function M.light()
   local cyan    = "#107860"
 
   return build_colors({
-    base0 = "#D8EED8",
-    base1 = "#C8E4C8",
-    base2 = "#B4D4B4",
-    base3 = "#90B890",
-    base4 = "#6E9A6E",
-    base5 = "#508050",
-    base6 = base6,
-    base7 = "#081808",
-
     nano_foreground_color = "#0E400E",
     nano_background_color = "#D8EED8",
     nano_highlight_color  = "#C8E4C8",
@@ -69,15 +60,6 @@ function M.dark()
   local cyan    = "#20C8A0"
 
   return build_colors({
-    base0 = "#060E06",
-    base1 = "#0C180C",
-    base2 = "#122012",
-    base3 = "#182E18",
-    base4 = "#204020",
-    base5 = "#2A5A2A",
-    base6 = base6,
-    base7 = "#00FF00",
-
     nano_foreground_color = "#80C080",
     nano_background_color = "#060E06",
     nano_highlight_color  = "#0E200E",

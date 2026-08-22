@@ -21,15 +21,6 @@ function M.light()
   local cyan    = "#187268"  -- verdigris
 
   return build_colors({
-    base0 = "#F6EEE0",  -- sanded pine
-    base1 = "#EFE4D2",
-    base2 = "#E6D8C2",
-    base3 = "#D2BE9E",
-    base4 = "#B49E78",
-    base5 = "#927C58",
-    base6 = base6,
-    base7 = "#1F150A",
-
     nano_foreground_color = "#402F1C",  -- walnut ink
     nano_background_color = "#F6EEE0",
     nano_highlight_color  = "#EFE4D2",
@@ -70,15 +61,6 @@ function M.dark()
   local cyan    = "#4FA898"  -- verdigris
 
   return build_colors({
-    base0 = "#241A12",  -- espresso walnut
-    base1 = "#2F2318",
-    base2 = "#3A2C1E",
-    base3 = "#463624",
-    base4 = "#574430",
-    base5 = "#6B543C",
-    base6 = base6,
-    base7 = "#EFE4D2",
-
     nano_foreground_color = "#DCC9AC",  -- oak cream
     nano_background_color = "#241A12",
     nano_highlight_color  = "#2F2318",

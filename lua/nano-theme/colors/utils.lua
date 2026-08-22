@@ -12,18 +12,8 @@ local M = {}
 ---                terminal colors.
 function M.build_colors(raw)
   return {
-    -- Base Ramp ---------------------------------------------------------------------------
-
-    base0 = raw.base0,
-    base1 = raw.base1,
-    base2 = raw.base2,
-    base3 = raw.base3,
-    base4 = raw.base4,
-    base5 = raw.base5,
-    base6 = raw.base6,
-    base7 = raw.base7,
-
     -- Colors ------------------------------------------------------------------------------
+
     nano_foreground_color = raw.nano_foreground_color,
     nano_background_color = raw.nano_background_color,
     nano_highlight_color  = raw.nano_highlight_color,
@@ -35,16 +25,12 @@ function M.build_colors(raw)
     nano_popout_color     = raw.nano_popout_color,
     nano_critical_color   = raw.nano_critical_color,
 
-    bg     = raw.nano_background_color,
-    fg     = raw.nano_foreground_color,
-    bg_alt = raw.nano_highlight_color,
-    fg_alt = raw.nano_foreground_color,
+    bg = raw.nano_background_color,
+    fg = raw.nano_foreground_color,
 
     -- Highlight Decoration ----------------------------------------------------------------
 
     nano_foreground = { fg = raw.nano_foreground_color },
-    nano_background = { fg = raw.nano_background_color },
-    nano_highlight  = { fg = raw.nano_highlight_color },
     nano_subtle     = { fg = raw.nano_subtle_color },
     nano_faded      = { fg = raw.nano_faded_color },
     nano_veryfaded  = { fg = raw.nano_veryfaded_color },

@@ -14,7 +14,7 @@ function M.get(options)
   local transparent_float = options.transparent and options.transparent_floats
   local float_bg = transparent_float and "NONE" or c.bg
   local float_blend = transparent_float and 0 or options.float_blend
-  local pmenu_bg = transparent_float and "NONE" or c.bg_alt
+  local pmenu_bg = transparent_float and "NONE" or c.nano_highlight_color
 
   return {
     ColorColumn   = { bg = c.nano_highlight_color },
