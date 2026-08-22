@@ -157,8 +157,10 @@ Run the dependency-free headless test suite from the repository root:
 make test
 ```
 
-## Screenshots
+## Variant Palettes
 
-![Light Theme](./screenshots/screenshot_light_01.png)
+![Variant palettes](./screenshots/variants.png)
 
-![Dark Theme](./screenshots/screenshot_dark_01.png)
+This panel is generated directly from the palette definitions in `lua/nano-theme/colors`,
+so it always matches the code. Regenerate it with `make panel` (rendering the PNG requires
+`librsvg` or `resvg`; without them the target still writes the SVG).

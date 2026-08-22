@@ -12,7 +12,7 @@
 
 # == Configuration =========================================================================
 
-.PHONY: help helptags test
+.PHONY: help helptags panel test
 
 .DEFAULT_GOAL := test
 
@@ -40,6 +40,21 @@ help:
 ## Regenerate Neovim help tags
 helptags:
 	nvim --headless -u NONE -c "helptags doc" -c "qall!"
+
+##@ Assets
+
+## Regenerate the variant palette panel (screenshots/variants.svg and .png)
+panel:
+	nvim --headless -u NONE -c "lua dofile('scripts/panel.lua')"
+	@if command -v rsvg-convert >/dev/null 2>&1; then \
+		rsvg-convert --width 2000 --keep-aspect-ratio --output screenshots/variants.png screenshots/variants.svg; \
+		echo "wrote screenshots/variants.png"; \
+	elif command -v resvg >/dev/null 2>&1; then \
+		resvg --width 2000 screenshots/variants.svg screenshots/variants.png; \
+		echo "wrote screenshots/variants.png"; \
+	else \
+		echo "SVG written. Install librsvg (rsvg-convert) or resvg to render the PNG."; \
+	fi
 
 ##@ Testing
 

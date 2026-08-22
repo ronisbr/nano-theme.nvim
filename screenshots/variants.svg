@@ -1,0 +1,442 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1730" viewBox="0 0 1000 1730">
+<rect x="0" y="0" width="1000" height="1730" rx="18" fill="#15171B"/>
+<text x="24" y="46" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="24" font-weight="600" fill="#ECECEA">N &#x39B; N O Theme &#8212; Variants</text>
+<text x="976" y="46" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="13" fill="#9AA0A6" text-anchor="end">15 variants &#183; light &#38; dark</text>
+<rect x="24" y="62" width="34" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="41" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">fg / highlight</text>
+<rect x="106" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="121" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">critical</text>
+<rect x="178" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="193" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">popout</text>
+<rect x="250" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="265" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">strong</text>
+<rect x="322" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="337" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">salient</text>
+<rect x="394" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="409" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">faded</text>
+<rect x="466" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="481" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">very faded</text>
+<rect x="538" y="62" width="30" height="10" rx="4" fill="none" stroke="rgba(128,128,128,0.35)"/>
+<text x="553" y="86" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="10" fill="#9AA0A6" text-anchor="middle">subtle</text>
+<g transform="translate(24,106)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FDF8E0" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#1A0C00">amber</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#806020" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#F5ECBE"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#2C1800" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B82000" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#1C4070" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#1A0C00" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#A06010" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#806020" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#C8B870" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E8DCA0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,106)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#0C0800" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#FFD060">amber</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#786010" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#1E1604"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C89030" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF5030" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#E06830" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#FFD060" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#F0C030" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#786010" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#3A2C00" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#302400" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,212)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F4F6FA" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#101C2C">blue</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#5A7898" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#E5EAF2"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#243040" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C02818" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#A07000" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#101C2C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#1E6AA8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#5A7898" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#B0C0D4" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#DDE4EE" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,212)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#1E2430" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#E8EEF4">blue</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#6A8AAA" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#28303E"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C4CED8" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#F06040" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#E8A838" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#E8EEF4" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#5AA0D0" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#6A8AAA" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#3C4E62" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#333E50" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,318)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FAFAF7" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#252520">default</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#6E6C66" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#EEEEE6"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#3A3D38" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#E53500" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#F09878" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#252520" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#6E4A85" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#6E6C66" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#C4C4BC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E8E8E2" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,318)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#262624" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#F0EFEB">default</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#969690" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#343432"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#D4D0CA" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#E8C46A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#D08770" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#F0EFEB" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#7A9DB8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#969690" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#4E4E4C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#484846" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,424)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F6F3EC" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#0D1014">gilded</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#686C73" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#EFE9DC"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#1B1D22" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B8331E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#387077" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#0D1014" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#996414" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#686C73" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CBC2AB" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E3DCC9" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,424)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#0D1014" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#E9E6DF">gilded</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#828A96" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#181F29"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#D8D5CD" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF7058" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#69A0A8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#E9E6DF" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#D8A24A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#828A96" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#2E3744" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#262E3A" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,530)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F6F6F4" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#101010">gray</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#727272" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#E9E9E7"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#1C1C1C" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#CC2800" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#6A5A50" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#101010" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#4A5060" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#727272" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#C4C4C4" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E2E2E0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,530)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#1C1C1C" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#ECECEC">gray</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#808080" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#262626"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C0C0C0" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#F25050" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#B0A090" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#ECECEC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#8A90A0" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#808080" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#383838" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#303030" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,636)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F6FAF4" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#182818">green</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#5A7C5A" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#E6EFE3"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#2A3C2A" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C03020" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#9A6020" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#182818" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#3A7A48" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#5A7C5A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#B8D0B8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E0EBE0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,636)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#222824" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#EAF0E8">green</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#7A9E7C" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#2E3830"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C8D4C4" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF6A50" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#C8A86A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#EAF0E8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#6BAE78" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#7A9E7C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#4A5C46" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#3A4A3C" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,742)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F8F8F4" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#141414">ink</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#6E6E6A" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#EBEBE6"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#1A1A18" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B82010" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#2E5E8A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#141414" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#A06020" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#6E6E6A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#C0C0B8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#D0D0C8" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,742)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#0E0E10" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#F0F0EC">ink</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#707070" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#222224"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C8C8C0" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF6648" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#78AACC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#F0F0EC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#D4924A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#707070" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#3C3C3E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#303032" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,848)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FAF8F8" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#0B54A8">jinx</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#6E687C" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#F1EEED"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#1F1A28" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B82530" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#0E7488" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#0B54A8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#A8228A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#6E687C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CBC4C3" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E6E1E0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,848)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#0C0A1A" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#1FB6FF">jinx</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#867EA8" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#1C1830"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C8C0DC" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF5530" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#2BE0D8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#1FB6FF" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#FF1A8E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#867EA8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#2E2848" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#2A2640" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,954)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F3F8F7" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#0E2124">ocean</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#4A7376" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#E7F0EE"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#22383B" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C0391E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#A05A28" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#0E2124" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#0F6E7C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#4A7376" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#B2CDCB" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#DCE9E7" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,954)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#101E20" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#E9F2F1">ocean</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#729B9E" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#1B2C2F"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#C3D7D5" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF6952" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#DFA05F" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#E9F2F1" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#55BEC8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#729B9E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#2F464A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#27393D" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1060)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#D8EED8" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#081808">old_terminal</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#447244" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#C8E4C8"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#0E400E" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B02010" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#1A4A1A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#081808" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#145214" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#447244" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#9EC49E" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#B4D4B4" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1060)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#060E06" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#00FF00">old_terminal</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#508050" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#0E200E"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#80C080" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF5040" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#70C870" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#00FF00" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#00AA00" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#508050" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#183018" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#122012" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1166)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FAF6F0" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#1A1208">orange</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#8A7058" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#F2EAE0"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#3A2C18" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C02800" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#2E6890" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#1A1208" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#A05C18" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#8A7058" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CEC0A8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E8DECE" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1166)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#2C2016" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#F0EAE0">orange</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#9A7C58" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#382A1C"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#D4C8B0" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#F25234" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#6A9AB8" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#F0EAE0" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#D48A42" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#9A7C58" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#4E3C28" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#443420" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1272)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FBF7F6" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#22191D">rose</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#75636A" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#F3ECEB"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#3B3134" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C42B3A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#2E7A70" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#22191D" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#A63A62" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#75636A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#D5C6C6" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#EBE1E0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1272)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#201A1E" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#F0E7EC">rose</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#9A8A92" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#2B242A"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#D6CBD1" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#F26D62" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#79BCAF" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#F0E7EC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#D98CAC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#9A8A92" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#443841" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#392F37" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1378)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FFFFFF" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#263238">rougier</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#90A4AE" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#FAFAFA"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#37474F" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#FF6F00" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#FFAB91" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#263238" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#673AB7" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#90A4AE" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CFD8DC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#ECEFF1" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1378)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#2E3440" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#ECEFF4">rougier</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#677691" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#3B4252"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#ECEFF4" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#EBCB8B" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#D08770" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#ECEFF4" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#81A1C1" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#677691" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#4C566A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#434C5E" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1484)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#FAF8FC" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#1F1830">violet</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#6F6382" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#F1EDF7"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#352E42" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#C22B36" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#A26320" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#1F1830" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#6D49A0" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#6F6382" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CFC5DC" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E8E2F0" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1484)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#1E1A28" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#EFEBF7">violet</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#968CAE" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#2A2438"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#D3CCE1" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#F26459" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#D9A15C" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#EFEBF7" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#AB8DE3" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#968CAE" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#423A54" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#383048" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(24,1590)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#F6EEE0" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#1F150A">wood</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#806643" text-anchor="end">LIGHT</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#EFE4D2"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#402F1C" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#B23A16" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#2E6A64" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#1F150A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#9A5A24" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#806643" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#CDB893" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#E6D8C2" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<g transform="translate(508,1590)">
+<rect x="0" y="0" width="468" height="92" rx="12" fill="#241A12" stroke="rgba(128,128,128,0.28)"/>
+<text x="20" y="34" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="17" font-weight="600" fill="#EFE4D2">wood</text>
+<text x="448" y="33" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" letter-spacing="2" fill="#9C7E58" text-anchor="end">DARK</text>
+<rect x="20" y="46" width="34" height="30" rx="8" fill="#2F2318"/>
+<text x="37" y="67" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="14" font-weight="500" fill="#DCC9AC" text-anchor="middle">Aa</text>
+<rect x="68" y="46" width="30" height="30" rx="8" fill="#E0623A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="106" y="46" width="30" height="30" rx="8" fill="#B5744A" stroke="rgba(128,128,128,0.35)"/>
+<rect x="144" y="46" width="30" height="30" rx="8" fill="#EFE4D2" stroke="rgba(128,128,128,0.35)"/>
+<rect x="182" y="46" width="30" height="30" rx="8" fill="#C89050" stroke="rgba(128,128,128,0.35)"/>
+<rect x="220" y="46" width="30" height="30" rx="8" fill="#9C7E58" stroke="rgba(128,128,128,0.35)"/>
+<rect x="258" y="46" width="30" height="30" rx="8" fill="#443422" stroke="rgba(128,128,128,0.35)"/>
+<rect x="296" y="46" width="30" height="30" rx="8" fill="#3A2C1E" stroke="rgba(128,128,128,0.35)"/>
+</g>
+<text x="976" y="1708" font-family="Inter, 'SF Pro Text', 'Segoe UI', 'DejaVu Sans', sans-serif" font-size="11" fill="#6E7175" text-anchor="end">generated from lua/nano-theme/colors &#183; make panel</text>
+</svg>
