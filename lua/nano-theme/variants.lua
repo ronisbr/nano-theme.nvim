@@ -20,6 +20,7 @@ M.names = {
   "orange",
   "rose",
   "rougier",
+  "violet",
   "wood",
 }
 

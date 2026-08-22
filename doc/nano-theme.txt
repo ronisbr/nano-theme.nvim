@@ -95,7 +95,7 @@ through 100.
 VARIANTS                                                 *nano-theme-variants*
 
 The light and dark variants are selected independently.  `vim.o.background`
-chooses which background mode is active.  There are 14 valid variant names:
+chooses which background mode is active.  There are 15 valid variant names:
 
 amber ~
     Amber phosphor CRT monitor palette. Dark mode uses a near-black background
@@ -160,6 +160,12 @@ rose ~
 rougier ~
     Palette closest to the original N Λ N O Emacs theme by @rougier, with
     minimal modifications.
+
+violet ~
+    Quiet lavender palette. Light mode uses a lilac-tinted near-white
+    background with a soft violet salient and a warm amber popout; dark mode
+    is aubergine — a violet-tinted near-black background with lavender text.
+    Stays muted where `jinx` is electric.
 
 wood ~
     Timber-inspired palette. Dark mode is walnut heartwood — a deep espresso

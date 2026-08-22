@@ -91,6 +91,7 @@ preserve the previous float appearance. `setup` validates both new values.
 | `orange` | Warm, earthy palette with orange-tinted backgrounds and amber accents. |
 | `rose` | Soft rose-quartz palette. Light mode is dawn — a warm near-white background with a barely perceptible pink tint, a muted raspberry salient, and a sea-glass teal popout; dark mode is dusk — a mauve-tinted near-black background with rosy text and a soft rose salient. |
 | `rougier` | Palette closest to the original N Λ N O Emacs theme by @rougier, with minimal modifications. |
+| `violet` | Quiet lavender palette. Light mode uses a lilac-tinted near-white background with a soft violet salient and a warm amber popout; dark mode is aubergine — a violet-tinted near-black background with lavender text. Stays muted where `jinx` is electric. |
 | `wood` | Timber-inspired palette. Dark mode is walnut heartwood — a deep espresso background with oak-cream text, a honey salient, and a mahogany popout; light mode is sanded oak — a pale pine background with dark walnut ink, a chestnut salient, and a verdigris popout. Syntax hues are muted toward natural grain and patina tones. |
 
 ### Changing the Variant at Runtime
