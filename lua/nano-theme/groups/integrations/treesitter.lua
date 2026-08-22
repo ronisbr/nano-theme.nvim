@@ -136,6 +136,83 @@ function M.get()
     ["@text.title.4.marker.markdown"] = c.nano_strong,
     ["@text.title.5.marker.markdown"] = c.nano_strong,
     ["@text.title.6.marker.markdown"] = c.nano_strong,
+
+    -- Modern Capture Names (Neovim 0.10+) -------------------------------------------------
+    --
+    -- Several captures were renamed in Neovim 0.10. The entries above keep older Neovim
+    -- versions working, while the entries below cover the current capture names.
+
+    -- Variables
+    ["@variable.member"]            = { fg = c.fg },
+    ["@variable.parameter"]         = c.nano_foreground,
+    ["@variable.parameter.builtin"] = c.nano_foreground,
+
+    -- Modules
+    ["@module.builtin"] = { link = "Structure" },
+
+    -- Literals
+    ["@number.float"]          = { link = "Float" },
+    ["@string.documentation"]  = { link = "String" },
+    ["@string.regexp"]         = { link = "String" },
+    ["@string.special.path"]   = { link = "Special" },
+    ["@string.special.symbol"] = c.nano_salient,
+    ["@string.special.url"]    = { fg = c.nano_salient_color, underline = true },
+
+    -- Types
+    ["@attribute.builtin"] = { link = "Constant" },
+
+    -- Functions
+    ["@function.method"]      = { link = "Function" },
+    ["@function.method.call"] = { link = "Function" },
+
+    -- Keywords
+    ["@keyword.conditional"]         = { link = "Conditional" },
+    ["@keyword.conditional.ternary"] = { link = "Conditional" },
+    ["@keyword.coroutine"]           = { link = "Keyword" },
+    ["@keyword.debug"]               = { link = "Keyword" },
+    ["@keyword.directive"]           = { link = "PreProc" },
+    ["@keyword.directive.define"]    = { link = "Define" },
+    ["@keyword.exception"]           = { link = "Exception" },
+    ["@keyword.import"]              = { link = "Include" },
+    ["@keyword.modifier"]            = { link = "StorageClass" },
+    ["@keyword.repeat"]              = { link = "Repeat" },
+    ["@keyword.type"]                = { link = "Keyword" },
+
+    -- Comments
+    ["@comment.documentation"] = { link = "Comment" },
+    ["@comment.error"]         = c.nano_critical,
+    ["@comment.note"]          = { link = "String" },
+    ["@comment.todo"]          = c.nano_salient,
+    ["@comment.warning"]       = c.nano_popout,
+
+    -- Markup
+    ["@markup.strong"]         = c.nano_strong,
+    ["@markup.italic"]         = { fg = c.nano_faded_color, italic = true },
+    ["@markup.strikethrough"]  = { fg = c.nano_faded_color, strikethrough = true },
+    ["@markup.underline"]      = { link = "Underlined" },
+    ["@markup.heading.1"]      = c.nano_strong,
+    ["@markup.heading.2"]      = c.nano_strong,
+    ["@markup.heading.3"]      = c.nano_strong,
+    ["@markup.heading.4"]      = c.nano_strong,
+    ["@markup.heading.5"]      = c.nano_strong,
+    ["@markup.heading.6"]      = c.nano_strong,
+    ["@markup.quote"]          = c.nano_faded,
+    ["@markup.math"]           = c.nano_salient,
+    ["@markup.link.label"]     = { link = "Tag" },
+    ["@markup.link.url"]       = { fg = c.nano_salient_color, underline = true },
+    ["@markup.raw"]            = c.nano_salient,
+    ["@markup.raw.block"]      = c.nano_salient,
+    ["@markup.list"]           = { link = "Special" },
+    ["@markup.list.checked"]   = c.nano_faded,
+    ["@markup.list.unchecked"] = c.nano_salient,
+
+    -- Diff
+    ["@diff.plus"]  = { link = "Added" },
+    ["@diff.minus"] = { link = "Removed" },
+    ["@diff.delta"] = { link = "Changed" },
+
+    -- Tags
+    ["@tag.builtin"] = c.nano_faded,
   }
 end
 

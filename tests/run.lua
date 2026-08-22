@@ -119,6 +119,23 @@ local ok, failure = xpcall(function()
   assert_true(highlight("@parameter").fg == highlight("Normal").fg, "@parameter has the wrong foreground")
   assert_true(highlight("Underlined").underline == true, "Underlined is not underlined")
 
+  -- Modern capture names, LSP groups, and diagnostics.
+  assert_link("@keyword.conditional", "Conditional")
+  assert_link("@function.method", "Function")
+  assert_link("@diff.plus", "Added")
+  assert_link("@lsp.type.parameter", "@variable.parameter")
+  assert_link("Substitute", "IncSearch")
+  assert_link("TermCursor", "Cursor")
+  assert_true(highlight("@variable.member").fg == highlight("Normal").fg, "@variable.member has the wrong foreground")
+  assert_true(highlight("@markup.heading.1").bold == true, "@markup.heading.1 is not bold")
+  assert_true(highlight("WinBar").bold == true, "WinBar is not bold")
+  assert_true(highlight("LspInlayHint").italic == true, "LspInlayHint is not italic")
+  local underline_error = highlight("DiagnosticUnderlineError")
+  assert_true(
+    underline_error.undercurl == true and underline_error.sp ~= nil,
+    "DiagnosticUnderlineError lacks a colored undercurl"
+  )
+
   local commands = vim.api.nvim_get_commands({ builtin = false })
   assert_true(commands.NanoThemeTransparent ~= nil, "toggle command is missing")
   assert_true(commands.NanoThemeTransparentEnable ~= nil, "enable command is missing")
