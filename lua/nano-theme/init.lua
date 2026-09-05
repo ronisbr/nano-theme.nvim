@@ -123,6 +123,7 @@ local integrations = {
   "copilot",
   "dashboard",
   "fzf-lua",
+  "hlslens",
   "indent-blankline",
   "mini",
   "neogit",

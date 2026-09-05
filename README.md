@@ -44,8 +44,8 @@ requirements.
 - Modern treesitter captures (Neovim 0.10+, with the legacy names kept for older
   versions), LSP semantic tokens, colored diagnostic undercurls, and inlay hints.
 - Terminal colors, a lualine theme that follows runtime variant switches, and integrations
-  for bufferline, copilot, dashboard, fzf-lua, indent-blankline, mini.nvim, neogit,
-  neo-tree, noice, notify, telescope, tiny-cmdline, and treesitter.
+  for bufferline, copilot, dashboard, fzf-lua, hlslens, indent-blankline, mini.nvim,
+  neogit, neo-tree, noice, notify, telescope, tiny-cmdline, and treesitter.
 - A dependency-free headless test suite.
 
 ## Installation
